@@ -18,23 +18,11 @@
 <body>
 
     <!-- BARRA SUPERIOR DE INFORMACIÓN -->
-    <div class="top-bar">
-        <div class="container top-bar-content">
-            <div class="top-info">
-                <span><i class="fa-solid fa-location-dot"></i> Cantón El Empalme, Guayas - Ecuador</span>
-                <span><i class="fa-solid fa-shield-halved"></i> RUC: 0993396391001</span>
-            </div>
-            <div class="top-contact">
-                <a href="mailto:deivibravo93@outlook.com"><i class="fa-solid fa-envelope"></i> deivibravo93@outlook.com</a>
-                <span class="lang-pill"><i class="fa-solid fa-globe"></i> ES / EN</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- NAVBAR NAVEGACIÓN -->
+    <!-- NAVBAR FIJO (Sin la barra superior) -->
     <header class="navbar" id="navbar">
         <div class="container nav-content">
             <a href="#inicio" class="logo-box">
+                <!-- El CSS se encargará de hacer este logo transparente y blanco -->
                 <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="logo-img">
             </a>
 
@@ -50,22 +38,27 @@
         </div>
     </header>
 
-    <!-- HERO SECTION MODERNO -->
+    <!-- HERO SECTION CON VIDEO DE FONDO -->
     <section class="hero" id="inicio">
+        <!-- Video de stock premium (Puerto/Barco) -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://cdn.pixabay.com/video/2020/03/11/33499-397194883_large.mp4" type="video/mp4">
+        </video>
         <div class="hero-overlay"></div>
+        
         <div class="container hero-container">
             <div class="hero-badge">
                 <span class="pulse-dot"></span> Exportación B2B Directa desde Ecuador
             </div>
             <h1>Nobleza Forestal & <br><span class="text-gold">Excelencia Acuícola</span> al Mundo</h1>
             <p class="hero-desc">
-                Conectamos la riqueza de los bosques tropicales y las piscinas de cultivo del Guayas con los puertos internacionales más exigentes. Trazabilidad certificada, cubicaje garantizado e inspección fitosanitaria y sanitaria continua.
+                Conectamos la riqueza de los bosques tropicales y las piscinas de cultivo del Guayas con los puertos internacionales más exigentes. Trazabilidad certificada y cubicaje garantizado.
             </p>
 
             <div class="hero-stats">
                 <div class="stat-card">
                     <h4>100%</h4>
-                    <p>Origen Legal & Fitosanitario</p>
+                    <p>Origen Legal & Fito</p>
                 </div>
                 <div class="stat-card">
                     <h4>FOB / CIF</h4>
@@ -73,31 +66,36 @@
                 </div>
                 <div class="stat-card">
                     <h4>IQF / Block</h4>
-                    <p>Cadena de Frío Certificada</p>
+                    <p>Cadena de Frío</p>
                 </div>
             </div>
 
             <div class="hero-cta-group">
-                <a href="#catalogo" class="btn-solid-gold"><i class="fa-solid fa-boxes-stacked"></i> Ver Fichas de Productos</a>
-                <a href="#agencia" class="btn-glass"><i class="fa-solid fa-truck-ramp-box"></i> Servicio para Exportadores</a>
+                <a href="#catalogo" class="btn-solid-gold"><i class="fa-solid fa-boxes-stacked"></i> Ver Fichas Técnicas</a>
+                <a href="#agencia" class="btn-glass"><i class="fa-solid fa-truck-ramp-box"></i> Servicio de Agencia</a>
             </div>
         </div>
     </section>
 
-    <!-- CERTIFICACIONES STRIP -->
-    <section class="cert-bar">
-        <div class="container cert-container">
-            <span class="cert-label">Estándares Internacionales:</span>
-            <div class="cert-badges">
-                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> HACCP Certified</div>
-                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> FDA Compliant</div>
-                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> Trazabilidad FSC</div>
-                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> Tratamiento Fitosanitario</div>
-                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> Agrocalidad Ecuador</div>
-            </div>
+    <!-- CARRUSEL INFINITO DE CERTIFICACIONES -->
+    <section class="cert-marquee">
+        <div class="marquee-track">
+            <!-- GRUPO 1 -->
+            <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> HACCP Certified</div>
+            <div class="cert-pill"><i class="fa-solid fa-shield-halved"></i> FDA Compliant</div>
+            <div class="cert-pill"><i class="fa-solid fa-leaf"></i> Trazabilidad FSC</div>
+            <div class="cert-pill"><i class="fa-solid fa-bug-slash"></i> Tratamiento Fitosanitario</div>
+            <div class="cert-pill"><i class="fa-solid fa-ship"></i> Logística Portuaria</div>
+            <div class="cert-pill"><i class="fa-solid fa-earth-americas"></i> Mercados Globales</div>
+            <!-- GRUPO 2 (Duplicado exacto para el efecto infinito) -->
+            <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> HACCP Certified</div>
+            <div class="cert-pill"><i class="fa-solid fa-shield-halved"></i> FDA Compliant</div>
+            <div class="cert-pill"><i class="fa-solid fa-leaf"></i> Trazabilidad FSC</div>
+            <div class="cert-pill"><i class="fa-solid fa-bug-slash"></i> Tratamiento Fitosanitario</div>
+            <div class="cert-pill"><i class="fa-solid fa-ship"></i> Logística Portuaria</div>
+            <div class="cert-pill"><i class="fa-solid fa-earth-americas"></i> Mercados Globales</div>
         </div>
     </section>
-
     <!-- QUIÉNES SOMOS & DIFERENCIAL -->
     <section class="about section-spacing" id="nosotros">
         <div class="container">
@@ -323,15 +321,17 @@
             </div>
 
             <div class="gallery-grid">
-                <!-- Usando exactamente tus nombres de archivos -->
+                
+                <!-- 1. Fumigador (Sanidad) -->
                 <div class="gallery-item large">
-                    <img src="assets/img/contenedor.jpeg" alt="Estiba y cubicaje en contenedor">
+                    <img src="assets/img/contenedor.jpeg" alt="Fumigación y sanidad">
                     <div class="gallery-caption">
-                        <span>Carga Forestal</span>
-                        <h5>Estiba máxima en contenedor High Cube</h5>
+                        <span>Control Sanitario</span>
+                        <h5>Tratamiento fitosanitario de exportación</h5>
                     </div>
                 </div>
 
+                <!-- 2. Bloques (Acopio) -->
                 <div class="gallery-item">
                     <img src="assets/img/Madera.jpeg" alt="Patios de madera de teca">
                     <div class="gallery-caption">
@@ -340,35 +340,40 @@
                     </div>
                 </div>
 
+                <!-- 3. Camión Gris (Flete) -->
                 <div class="gallery-item">
-                    <img src="assets/img/contenedor2.jpeg" alt="Transporte pesado en finca">
+                    <img src="assets/img/contenedor2.jpeg" alt="Camión de carga pesada">
                     <div class="gallery-caption">
                         <span>Flete Terrestre</span>
                         <h5>Camión cabezal en zona de embarque</h5>
                     </div>
                 </div>
 
+                <!-- 4. Troncos (Selección) -->
                 <div class="gallery-item">
-                    <img src="assets/img/Madera2.jpeg" alt="Pila de teca seleccionada">
+                    <img src="assets/img/Madera2.jpeg" alt="Madera seleccionada">
                     <div class="gallery-caption">
-                        <span>Selección</span>
-                        <h5>Lotes clasificados por medida y corte</h5>
+                        <span>Clasificación</span>
+                        <h5>Lotes agrupados por medida y corte</h5>
                     </div>
                 </div>
 
+                <!-- 5. Camión Rojo (Logística) -->
                 <div class="gallery-item">
-                    <img src="assets/img/contenedor3.jpeg" alt="Fumigación y tratamiento fitosanitario">
+                    <img src="assets/img/contenedor3.jpeg" alt="Transporte logístico">
                     <div class="gallery-caption">
-                        <span>Sanidad</span>
-                        <h5>Tratamiento fitosanitario de exportación</h5>
+                        <span>Logística Interna</span>
+                        <h5>Despliegue terrestre hacia puerto</h5>
                     </div>
                 </div>
 
+                <!-- 6. Contenedor Lleno (Estiba) -->
                 <div class="gallery-item">
-                    <img src="assets/img/Madera3.jpeg" alt="Madera lista para despacho">
+                    <!-- Si tienes una foto donde se ve el contenedor lleno de madera por dentro, cámbiala aquí -->
+                    <img src="assets/img/Madera3.jpeg" alt="Estiba de contenedor">
                     <div class="gallery-caption">
-                        <span>Logística</span>
-                        <h5>Preparación para despacho portuario</h5>
+                        <span>Carga Forestal</span>
+                        <h5>Estiba máxima en contenedor Dry/HC</h5>
                     </div>
                 </div>
             </div>
