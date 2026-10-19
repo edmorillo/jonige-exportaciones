@@ -39,8 +39,9 @@
     </header>
 
     <!-- HERO SECTION CON VIDEO DE FONDO -->
+    <!-- HERO SECTION CON VIDEO DE FONDO -->
     <section class="hero" id="inicio">
-        <!-- Video de stock premium (Puerto/Barco) -->
+        <!-- El video ahora tiene las clases correctas para mostrarse al fondo -->
         <video autoplay muted loop playsinline class="hero-video">
             <source src="https://cdn.pixabay.com/video/2020/03/11/33499-397194883_large.mp4" type="video/mp4">
         </video>
@@ -48,31 +49,33 @@
         
         <div class="container hero-container">
             <div class="hero-badge">
-                <span class="pulse-dot"></span> Exportación B2B Directa desde Ecuador
+                <span class="pulse-dot"></span> Calidad de Exportación B2B
             </div>
-            <h1>Nobleza Forestal & <br><span class="text-gold">Excelencia Acuícola</span> al Mundo</h1>
+            
+            <!-- Tipografía estilo Demo Dental: Directa, fuerte y limpia -->
+            <h1 class="hero-title">Tu carga internacional en <br><span class="text-gold">manos de especialistas.</span></h1>
             <p class="hero-desc">
-                Conectamos la riqueza de los bosques tropicales y las piscinas de cultivo del Guayas con los puertos internacionales más exigentes. Trazabilidad certificada y cubicaje garantizado.
+                Conectamos la riqueza forestal y acuícola del Ecuador con los puertos más exigentes del mundo. Aseguramos trazabilidad, cubicaje exacto y cadena de frío certificada.
             </p>
 
             <div class="hero-stats">
                 <div class="stat-card">
                     <h4>100%</h4>
-                    <p>Origen Legal & Fito</p>
+                    <p>Origen Legal Certificado</p>
                 </div>
                 <div class="stat-card">
                     <h4>FOB / CIF</h4>
-                    <p>Modalidades de Embarque</p>
+                    <p>Modalidades de Envío</p>
                 </div>
                 <div class="stat-card">
-                    <h4>IQF / Block</h4>
-                    <p>Cadena de Frío</p>
+                    <h4>HACCP</h4>
+                    <p>Inocuidad Garantizada</p>
                 </div>
             </div>
 
             <div class="hero-cta-group">
-                <a href="#catalogo" class="btn-solid-gold"><i class="fa-solid fa-boxes-stacked"></i> Ver Fichas Técnicas</a>
-                <a href="#agencia" class="btn-glass"><i class="fa-solid fa-truck-ramp-box"></i> Servicio de Agencia</a>
+                <a href="#catalogo" class="btn-solid-gold"><i class="fa-solid fa-boxes-stacked"></i> Ver Catálogo</a>
+                <a href="#agencia" class="btn-glass"><i class="fa-solid fa-truck-ramp-box"></i> Rentar Logística</a>
             </div>
         </div>
     </section>
@@ -168,7 +171,7 @@
                 <div class="catalog-grid">
                     <div class="spec-card">
                         <div class="spec-header">
-                            <span class="spec-badge">Especie Principal</span>
+                            <span class="spec-badge">Línea Premium</span>
                             <h3>Teca Ecuatoriana (Tectona grandis)</h3>
                         </div>
                         <p class="spec-desc">Madera reconocida internacionalmente por su alta densidad, durabilidad y concentración natural de aceites protectores.</p>
@@ -312,70 +315,77 @@
     </section>
 
     <!-- GALERÍA DE OPERACIONES EN TERRENO (TUS FOTOS REALES) -->
+    <!-- GALERÍA DE OPERACIONES (Estilo Tarjetas Demo Dental) -->
     <section class="gallery section-spacing bg-surface" id="galeria">
         <div class="container">
             <div class="section-header-center">
                 <span class="section-tag">Transparencia Operativa</span>
-                <h2 class="section-title">Nuestras Operaciones en Ecuador</h2>
-                <p class="section-sub">Imágenes reales del proceso de carga, patios forestales y logística de transporte pesado.</p>
+                <h2 class="section-title">Nuestras Operaciones en Terreno</h2>
+                <p class="section-sub">Conozca nuestra infraestructura logística y de control en Ecuador.</p>
             </div>
 
-            <div class="gallery-grid">
+            <div class="gallery-grid-dental">
                 
-                <!-- 1. Fumigador (Sanidad) -->
-                <div class="gallery-item large">
-                    <img src="assets/img/contenedor.jpeg" alt="Fumigación y sanidad">
-                    <div class="gallery-caption">
-                        <span>Control Sanitario</span>
-                        <h5>Tratamiento fitosanitario de exportación</h5>
+                <!-- Tarjeta 1 -->
+                <div class="gallery-card-dental">
+                    <div class="g-img-box"><img src="assets/img/contenedor.jpeg" alt="Fumigación"></div>
+                    <div class="g-body">
+                        <h4>Tratamiento Fitosanitario</h4>
+                        <p>Control estricto y fumigación en cada embarque para cumplir con todas las regulaciones de aduanas internacionales.</p>
+                        <span class="g-link">Área de Sanidad <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- 2. Bloques (Acopio) -->
-                <div class="gallery-item">
-                    <img src="assets/img/Madera.jpeg" alt="Patios de madera de teca">
-                    <div class="gallery-caption">
-                        <span>Acopio Forestal</span>
-                        <h5>Bloques escuadrados en patio</h5>
+                <!-- Tarjeta 2 -->
+                <div class="gallery-card-dental">
+                    <div class="g-img-box"><img src="assets/img/Madera.jpeg" alt="Acopio"></div>
+                    <div class="g-body">
+                        <h4>Acopio Forestal</h4>
+                        <p>Patios de acopio propios donde agrupamos los bloques escuadrados de teca asegurando el secado natural óptimo.</p>
+                        <span class="g-link">Área de Acopio <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- 3. Camión Gris (Flete) -->
-                <div class="gallery-item">
-                    <img src="assets/img/contenedor2.jpeg" alt="Camión de carga pesada">
-                    <div class="gallery-caption">
-                        <span>Flete Terrestre</span>
-                        <h5>Camión cabezal en zona de embarque</h5>
+                <!-- Tarjeta 3 -->
+                <div class="gallery-card-dental">
+                    <div class="g-img-box"><img src="assets/img/contenedor2.jpeg" alt="Flete"></div>
+                    <div class="g-body">
+                        <h4>Flete Terrestre Seguro</h4>
+                        <p>Flota de camiones cabezales preparados para mover la carga pesada desde nuestras fincas hasta el puerto de Guayaquil.</p>
+                        <span class="g-link">Área de Transporte <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- 4. Troncos (Selección) -->
-                <div class="gallery-item">
-                    <img src="assets/img/Madera2.jpeg" alt="Madera seleccionada">
-                    <div class="gallery-caption">
-                        <span>Clasificación</span>
-                        <h5>Lotes agrupados por medida y corte</h5>
+                <!-- Tarjeta 4 -->
+                <div class="gallery-card-dental">
+                    <div class="g-img-box"><img src="assets/img/Madera2.jpeg" alt="Selección"></div>
+                    <div class="g-body">
+                        <h4>Clasificación Especializada</h4>
+                        <p>Lotes de madera rigurosamente clasificados por medida y tipo de corte antes de iniciar el proceso de estiba.</p>
+                        <span class="g-link">Área de Selección <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- 5. Camión Rojo (Logística) -->
-                <div class="gallery-item">
-                    <img src="assets/img/contenedor3.jpeg" alt="Transporte logístico">
-                    <div class="gallery-caption">
-                        <span>Logística Interna</span>
-                        <h5>Despliegue terrestre hacia puerto</h5>
+                <!-- Tarjeta 5 -->
+                <div class="gallery-card-dental">
+                    <div class="g-img-box"><img src="assets/img/contenedor3.jpeg" alt="Logística"></div>
+                    <div class="g-body">
+                        <h4>Despliegue Logístico</h4>
+                        <p>Coordinación ininterrumpida de contenedores para garantizar que el volumen pactado llegue en los tiempos acordados.</p>
+                        <span class="g-link">Área de Logística <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- 6. Contenedor Lleno (Estiba) -->
-                <div class="gallery-item">
-                    <!-- Si tienes una foto donde se ve el contenedor lleno de madera por dentro, cámbiala aquí -->
-                    <img src="assets/img/Madera3.jpeg" alt="Estiba de contenedor">
-                    <div class="gallery-caption">
-                        <span>Carga Forestal</span>
-                        <h5>Estiba máxima en contenedor Dry/HC</h5>
+                <!-- Tarjeta 6 -->
+                <div class="gallery-card-dental">
+                    <div class="g-img-box"><img src="assets/img/Madera3.jpeg" alt="Estiba"></div>
+                    <div class="g-body">
+                        <h4>Estiba Máxima</h4>
+                        <p>Aprovechamiento total del espacio (cubicaje) en contenedores Dry y High Cube para rentabilizar su flete marítimo.</p>
+                        <span class="g-link">Área de Carga <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
