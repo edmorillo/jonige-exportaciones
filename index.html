@@ -3,183 +3,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JONIGE S.A.S. | Exportadora de Madera y Camarones</title>
+    <title>JONIGE S.A.S. | Exportadora de Madera & Camarones Ecuador</title>
     
-    <!-- Tipografía moderna Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tipografías: Syne (títulos industriales modernos) + Plus Jakarta Sans (lectura limpia) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Íconos (FontAwesome) para darle un toque premium -->
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- NAVBAR SECRETO AL INICIO, SE MUESTRA AL BAJAR -->
+    <!-- BARRA SUPERIOR DE INFORMACIÓN -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-location-dot"></i> Cantón El Empalme, Guayas - Ecuador</span>
+                <span><i class="fa-solid fa-shield-halved"></i> RUC: 0993396391001</span>
+            </div>
+            <div class="top-contact">
+                <a href="mailto:deivibravo93@outlook.com"><i class="fa-solid fa-envelope"></i> deivibravo93@outlook.com</a>
+                <span class="lang-pill"><i class="fa-solid fa-globe"></i> ES / EN</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR NAVEGACIÓN -->
     <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo-link">
-                <!-- ASEGURATE DE TENER TU LOGO ACÁ -->
-                <img src="assets/img/logo.png" alt="JONIGE S.A.S." class="logo-img">
+        <div class="container nav-content">
+            <a href="#inicio" class="logo-box">
+                <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="logo-img">
             </a>
-            
-            <nav class="nav-links">
-                <a href="#nosotros">Nosotros</a>
-                <a href="#productos">Exportación</a>
-                <a href="#agencia">Agencia</a>
+
+            <nav class="nav-menu">
+                <a href="#nosotros">Empresa</a>
+                <a href="#catalogo">Catálogo Técnico</a>
+                <a href="#proceso">Logística & Calidad</a>
+                <a href="#galeria">Operaciones</a>
+                <a href="#agencia">Servicio Agencia</a>
             </nav>
-            
-            <a href="#contacto" class="btn-outline">Cotizar Ahora</a>
+
+            <a href="#contacto" class="btn-primary-nav">Solicitar Cotización</a>
         </div>
     </header>
 
-    <!-- HERO SECTION (IMPACTO VISUAL) -->
+    <!-- HERO SECTION MODERNO -->
     <section class="hero" id="inicio">
-        <!-- Imagen de fondo de bosque tropical y agua (Stock premium) -->
-        <div class="hero-bg"></div>
-        <div class="hero-content fade-in-up">
-            <span class="badge">Desde Ecuador para el mundo</span>
-            <h1>Exportamos <span class="text-gold">Naturaleza</span>,<br> Calidad y Confianza</h1>
-            <p>La nobleza de la madera tropical ecuatoriana y la excelencia mundialmente reconocida de nuestro camarón, directamente a su puerto.</p>
-            <div class="hero-actions">
-                <a href="#productos" class="btn-solid">Ver Líneas de Negocio <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> Exportación B2B Directa desde Ecuador
+            </div>
+            <h1>Nobleza Forestal & <br><span class="text-gold">Excelencia Acuícola</span> al Mundo</h1>
+            <p class="hero-desc">
+                Conectamos la riqueza de los bosques tropicales y las piscinas de cultivo del Guayas con los puertos internacionales más exigentes. Trazabilidad certificada, cubicaje garantizado e inspección fitosanitaria y sanitaria continua.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <h4>100%</h4>
+                    <p>Origen Legal & Fitosanitario</p>
+                </div>
+                <div class="stat-card">
+                    <h4>FOB / CIF</h4>
+                    <p>Modalidades de Embarque</p>
+                </div>
+                <div class="stat-card">
+                    <h4>IQF / Block</h4>
+                    <p>Cadena de Frío Certificada</p>
+                </div>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="#catalogo" class="btn-solid-gold"><i class="fa-solid fa-boxes-stacked"></i> Ver Fichas de Productos</a>
+                <a href="#agencia" class="btn-glass"><i class="fa-solid fa-truck-ramp-box"></i> Servicio para Exportadores</a>
             </div>
         </div>
     </section>
 
-    <!-- QUIÉNES SOMOS -->
-    <section class="about section-padding" id="nosotros">
-        <div class="container reveal">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 class="section-title">Productores y <br>Exportadores Directos</h2>
-                    <p>Ubicados en El Empalme, Guayas, nacimos con el propósito de llevar dos de los productos más representativos del Ecuador a los mercados internacionales más exigentes.</p>
-                    <p>Contamos con alianzas estratégicas, plantas de procesamiento certificadas y una logística eficiente que garantiza trazabilidad total desde el origen hasta el contenedor.</p>
-                </div>
-                <div class="about-features">
-                    <div class="feature-card">
-                        <i class="fa-solid fa-leaf"></i>
-                        <h3>Sostenibilidad</h3>
-                        <p>Bosques manejados legalmente y acuicultura responsable.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fa-solid fa-file-shield"></i>
-                        <h3>Transparencia</h3>
-                        <p>Trazabilidad completa y normativas FDA, HACCP y FSC.</p>
-                    </div>
-                </div>
+    <!-- CERTIFICACIONES STRIP -->
+    <section class="cert-bar">
+        <div class="container cert-container">
+            <span class="cert-label">Estándares Internacionales:</span>
+            <div class="cert-badges">
+                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> HACCP Certified</div>
+                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> FDA Compliant</div>
+                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> Trazabilidad FSC</div>
+                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> Tratamiento Fitosanitario</div>
+                <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> Agrocalidad Ecuador</div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUCTOS (MADERA Y CAMARÓN) -->
-    <section class="products section-padding bg-light" id="productos">
-        <div class="container reveal">
-            <div class="text-center">
-                <h2 class="section-title">Nuestras Líneas de Exportación</h2>
-                <p class="section-subtitle">Materia prima de excelencia con estándares internacionales.</p>
-            </div>
-
-            <div class="product-grid">
-                <!-- TARJETA MADERA -->
-                <div class="product-card">
-                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1542314831-c6a420325970?auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="product-info">
-                        <div class="icon-wrapper"><i class="fa-solid fa-tree"></i></div>
-                        <h3>Madera Tropical</h3>
-                        <p>Exportación de Teca, Balsa, Laurel, Cedro y madera canteada. Garantizamos certificación de origen legal y tratamiento fitosanitario.</p>
-                        <ul class="product-list">
-                            <li><i class="fa-solid fa-check text-gold"></i> Origen Legal Certificado</li>
-                            <li><i class="fa-solid fa-check text-gold"></i> Tratamiento Fitosanitario</li>
-                            <li><i class="fa-solid fa-check text-gold"></i> Alto Volumen Mensual</li>
-                        </ul>
+    <!-- QUIÉNES SOMOS & DIFERENCIAL -->
+    <section class="about section-spacing" id="nosotros">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text-col">
+                    <span class="section-tag">Perfil Empresarial</span>
+                    <h2 class="section-title">Infraestructura y Compromiso desde El Empalme</h2>
+                    <p class="lead-text">
+                        <strong>JONIGE S.A.S.</strong> se consolida como un operador confiable en el corazón productivo de la provincia del Guayas. Integramos procesos de acopio, aserrío, empaque y despacho portuario eliminando intermediaciones innecesarias.
+                    </p>
+                    <p class="sub-text">
+                        Garantizamos contratos estables en volumen y calendarización de embarques, operando bajo normativas ambientales estrictas tanto en aprovechamiento de maderas tropicales como en la cosecha y selección de camarón premium.
+                    </p>
+                    
+                    <div class="values-grid">
+                        <div class="val-box">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <div>
+                                <h5>Cubicaje Exacto</h5>
+                                <p>Aprovechamiento máximo y estiba certificada en contenedor cerrado.</p>
+                            </div>
+                        </div>
+                        <div class="val-box">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <div>
+                                <h5>Transparencia Legal</h5>
+                                <p>Guías de movilización forestal, certificaciones de origen y BL internacional.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- TARJETA CAMARÓN -->
-                <div class="product-card">
-                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1559742811-822873691f?auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="product-info">
-                        <div class="icon-wrapper"><i class="fa-solid fa-shrimp"></i></div>
-                        <h3>Camarón Ecuatoriano</h3>
-                        <p>Camarón entero, cola, con y sin cáscara. Tallas HOSO, HLSO, PDTO. Procesado con empaque IQF para exportación internacional.</p>
-                        <ul class="product-list">
-                            <li><i class="fa-solid fa-check text-gold"></i> Certificación HACCP</li>
-                            <li><i class="fa-solid fa-check text-gold"></i> Trazabilidad de Piscina</li>
-                            <li><i class="fa-solid fa-check text-gold"></i> Empaque IQF Premium</li>
-                        </ul>
+                <div class="about-highlight-card">
+                    <div class="hl-content">
+                        <i class="fa-solid fa-award hl-icon"></i>
+                        <h3>Seguridad en Destino</h3>
+                        <p>Cada embarque que sale con el sello JONIGE S.A.S. cuenta con verificación técnica previa al precintado de aduana, protegiendo su inversión en puertos de América, Europa y Asia.</p>
+                        <hr>
+                        <div class="hl-footer">
+                            <span>Representante Legal</span>
+                            <strong>Deivy Alexander Bravo Sornoza</strong>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AGENCIA LOGÍSTICA (EL ALQUILER DE NOMBRE) -->
-    <section class="agency section-padding" id="agencia">
-        <div class="container reveal">
-            <div class="agency-banner">
-                <div class="agency-content">
-                    <span class="badge badge-dark">Servicio Local</span>
-                    <h2>Agencia y Representación <br>para Exportadores</h2>
-                    <p>¿Es productor ecuatoriano y necesita exportar su mercadería pero no cuenta con la infraestructura legal? En JONIGE S.A.S. actuamos como su brazo logístico y comercial.</p>
-                    <p>Ofrecemos el respaldo legal de nuestra empresa, gestión de tráilers y contenedores para que su carga llegue al mundo sin complicaciones. Cobramos una tarifa plana por embarque.</p>
-                    <a href="#contacto" class="btn-solid mt-4">Consultar Servicio</a>
-                </div>
-                <div class="agency-image">
-                    <!-- Foto de contenedor / tráiler -->
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8ed3c84a0d?auto=format&fit=crop&w=800&q=80" alt="Logística de contenedores">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACTO Y FOOTER -->
-    <footer class="footer" id="contacto">
-        <div class="container reveal">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <img src="assets/img/logo.png" alt="JONIGE S.A.S." class="footer-logo">
-                    <p>Exportamos naturaleza, calidad y confianza. El socio estratégico para su negocio internacional.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+    <!-- CATÁLOGO TÉCNICO INTERACTIVO (TABS) -->
+    <section class="catalog section-spacing bg-surface" id="catalogo">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-tag">Especificaciones B2B</span>
+                <h2 class="section-title">Líneas de Exportación Especializadas</h2>
+                <p class="section-sub">Seleccione una división para consultar detalles de corte, tallas, calibres y métodos de conservación.</p>
                 
-                <div class="footer-contact">
-                    <h3>Contacto Directo</h3>
-                    <p><i class="fa-solid fa-user"></i> Deivy Bravo Sornoza</p>
-                    <p><i class="fa-solid fa-envelope"></i> deivibravo93@outlook.com</p>
-                    <p><i class="fa-solid fa-location-dot"></i> El Empalme, Guayas, Ecuador</p>
-                    <p><i class="fa-solid fa-building"></i> RUC: 0993396391001</p>
-                </div>
-
-                <div class="footer-form">
-                    <h3>Solicite una Cotización</h3>
-                    <!-- Formulario conectado a Formspree (reemplazar TU_CODIGO con el código de Formspree) -->
-                    <form action="https://formspree.io/f/TU_CODIGO" method="POST" class="contact-form">
-                        <input type="text" name="nombre" placeholder="Nombre o Empresa" required>
-                        <input type="email" name="email" placeholder="Correo Electrónico" required>
-                        <select name="interes" required>
-                            <option value="" disabled selected>¿Qué servicio busca?</option>
-                            <option value="madera">Comprar Madera</option>
-                            <option value="camaron">Comprar Camarón</option>
-                            <option value="agencia">Servicio de Agencia/Exportación</option>
-                        </select>
-                        <button type="submit" class="btn-solid w-100">Enviar Consulta</button>
-                    </form>
+                <!-- SELECTOR DE LÍNEA (BOTONES DE TABS) -->
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-madera')">
+                        <i class="fa-solid fa-tree"></i> División Madera Tropical
+                    </button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-camaron')">
+                        <i class="fa-solid fa-shrimp"></i> División Camarón Vannamei
+                    </button>
                 </div>
             </div>
+
+            <!-- CONTENIDO TAB 1: MADERA -->
+            <div id="tab-madera" class="tab-pane active">
+                <div class="catalog-grid">
+                    <div class="spec-card">
+                        <div class="spec-header">
+                            <span class="spec-badge">Especie Principal</span>
+                            <h3>Teca Ecuatoriana (Tectona grandis)</h3>
+                        </div>
+                        <p class="spec-desc">Madera reconocida internacionalmente por su alta densidad, durabilidad y concentración natural de aceites protectores.</p>
+                        <ul class="spec-list">
+                            <li><strong>Presentación:</strong> Bloques escuadrados / Rolliza / Canteada.</li>
+                            <li><strong>Humedad:</strong> Secado natural (AD) / Estufa (KD) según requerimiento.</li>
+                            <li><strong>Medidas:</strong> Largos estándar de 2.20m a 2.50m | Diámetros y secciones uniformes.</li>
+                            <li><strong>Tratamiento:</strong> Fumigación y certificado fitosanitario de origen.</li>
+                            <li><strong>Aplicaciones:</strong> Industria naval, cubiertas exteriores, ebanistería fina.</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-card">
+                        <div class="spec-header">
+                            <span class="spec-badge">Línea Liviana & Semidura</span>
+                            <h3>Balsa, Laurel & Cedro Tropical</h3>
+                        </div>
+                        <p class="spec-desc">Maderas nativas seleccionadas bajo planes de manejo sostenible y licencias ambientales de aprovechamiento forestal.</p>
+                        <ul class="spec-list">
+                            <li><strong>Madera de Balsa:</strong> Ultra ligera, alta absorción estructural para palas eólicas y aeromodelismo.</li>
+                            <li><strong>Laurel:</strong> Grano fino, excelente trabajabilidad para carpintería general y revestimientos.</li>
+                            <li><strong>Cedro:</strong> Resistencia comprobada contra plagas, acabado aromático de gran demanda.</li>
+                            <li><strong>Empaque:</strong> Zunchado de alta tensión, separadores de secado y protección perimetral.</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-card highlight-spec">
+                        <div class="spec-header">
+                            <span class="spec-badge text-gold">Logística Forestal</span>
+                            <h3>Cubicaje y Carga de Madera</h3>
+                        </div>
+                        <div class="spec-stats-box">
+                            <div class="spec-stat-item">
+                                <strong>20 & 40 FT</strong>
+                                <span>Contenedores Dry / High Cube</span>
+                            </div>
+                            <div class="spec-stat-item">
+                                <strong>Precintado</strong>
+                                <span>Aduanero en Patio de Carga</span>
+                            </div>
+                        </div>
+                        <p class="spec-note">Inspección directa de estiba por nuestro equipo en El Empalme antes del traslado hacia el puerto marítimo de Guayaquil.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENIDO TAB 2: CAMARÓN -->
+            <div id="tab-camaron" class="tab-pane">
+                <div class="catalog-grid">
+                    <div class="spec-card">
+                        <div class="spec-header">
+                            <span class="spec-badge">Litopenaeus Vannamei</span>
+                            <h3>Presentaciones de Exportación</h3>
+                        </div>
+                        <p class="spec-desc">Camarón de cultivo de aguas salobres ecuatorianas, reconocido mundialmente por su firmeza, sabor dulce y textura insuperable.</p>
+                        <ul class="spec-list">
+                            <li><strong>HOSO:</strong> Entero con cabeza y con cáscara (Head-On, Shell-On).</li>
+                            <li><strong>HLSO:</strong> Cola con cáscara sin cabeza (Headless, Shell-On).</li>
+                            <li><strong>PDTO:</strong> Pelado, desvenado con cola (Peeled, Deveined, Tail-On).</li>
+                            <li><strong>P&D:</strong> Pelado y desvenado completo (Peeled & Deveined).</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-card">
+                        <div class="spec-header">
+                            <span class="spec-badge">Control & Conservación</span>
+                            <h3>Tallas & Métodos de Frío</h3>
+                        </div>
+                        <p class="spec-desc">Procesamiento en plantas con trazabilidad total, monitoreo continuo de temperatura y empaque de barrera.</p>
+                        <ul class="spec-list">
+                            <li><strong>Calibres HOSO:</strong> 20/30, 30/40, 40/50, 50/60, 60/70, 70/80 piezas/kg.</li>
+                            <li><strong>Calibres HLSO:</strong> 16/20, 21/25, 26/30, 31/35, 36/40, 41/50 piezas/lb.</li>
+                            <li><strong>Congelación:</strong> IQF (congelado individual ultra rápido) y Bloque tradicional.</li>
+                            <li><strong>Glaseo:</strong> De 0% a 20% adaptado a especificaciones del comprador.</li>
+                            <li><strong>Master Carton:</strong> Cajas de 1kg, 2kg y 10kg selladas para conservación en frío.</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-card highlight-spec">
+                        <div class="spec-header">
+                            <span class="spec-badge text-gold">Cadena de Frío</span>
+                            <h3>Contenedores Reefers</h3>
+                        </div>
+                        <div class="spec-stats-box">
+                            <div class="spec-stat-item">
+                                <strong>-18°C a -22°C</strong>
+                                <span>Monitoreo Térmico Continuo</span>
+                            </div>
+                            <div class="spec-stat-item">
+                                <strong>HACCP / FDA</strong>
+                                <span>Inocuidad Alimentaria Total</span>
+                            </div>
+                        </div>
+                        <p class="spec-note">Despacho desde plantas procesadoras autorizadas directamente a terminales portuarias con generadores genset activos durante el flete terrestre.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROCESO LOGÍSTICO (PASO A PASO) -->
+    <section class="process section-spacing" id="proceso">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-tag">Garantía de Entrega</span>
+                <h2 class="section-title">El Ciclo de Exportación Seguro</h2>
+                <p class="section-sub">Desde el origen en campo hasta el embarque en buque oceánico.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="step-card">
+                    <span class="step-num">01</span>
+                    <i class="fa-solid fa-seedling"></i>
+                    <h4>Selección en Origen</h4>
+                    <p>Revisión técnica de lotes de madera en pie/troza y control sanitario en piscinas camaroneras.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-num">02</span>
+                    <i class="fa-solid fa-microscope"></i>
+                    <h4>Procesamiento & Normas</h4>
+                    <p>Corte, aserrío, tratamiento fitosanitario y empaque bajo protocolos sanitarios y de inocuidad.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-num">03</span>
+                    <i class="fa-solid fa-boxes-packing"></i>
+                    <h4>Estiba & Precintado</h4>
+                    <p>Carga directa en contenedores de 20/40 pies con optimización de m³ y sellos de seguridad aduaneros.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-num">04</span>
+                    <i class="fa-solid fa-ship"></i>
+                    <h4>Despacho Portuario</h4>
+                    <p>Transferencia terrestre al Puerto de Guayaquil, gestión de BL y seguimiento naviero hasta destino.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE OPERACIONES EN TERRENO (TUS FOTOS REALES) -->
+    <section class="gallery section-spacing bg-surface" id="galeria">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-tag">Transparencia Operativa</span>
+                <h2 class="section-title">Nuestras Operaciones en Ecuador</h2>
+                <p class="section-sub">Imágenes reales del proceso de carga, patios forestales y logística de transporte pesado.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Usando exactamente tus nombres de archivos -->
+                <div class="gallery-item large">
+                    <img src="assets/img/contenedor.jpeg" alt="Estiba y cubicaje en contenedor">
+                    <div class="gallery-caption">
+                        <span>Carga Forestal</span>
+                        <h5>Estiba máxima en contenedor High Cube</h5>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/Madera.jpeg" alt="Patios de madera de teca">
+                    <div class="gallery-caption">
+                        <span>Acopio Forestal</span>
+                        <h5>Bloques escuadrados en patio</h5>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/contenedor2.jpeg" alt="Transporte pesado en finca">
+                    <div class="gallery-caption">
+                        <span>Flete Terrestre</span>
+                        <h5>Camión cabezal en zona de embarque</h5>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/Madera2.jpeg" alt="Pila de teca seleccionada">
+                    <div class="gallery-caption">
+                        <span>Selección</span>
+                        <h5>Lotes clasificados por medida y corte</h5>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/contenedor3.jpeg" alt="Fumigación y tratamiento fitosanitario">
+                    <div class="gallery-caption">
+                        <span>Sanidad</span>
+                        <h5>Tratamiento fitosanitario de exportación</h5>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/Madera3.jpeg" alt="Madera lista para despacho">
+                    <div class="gallery-caption">
+                        <span>Logística</span>
+                        <h5>Preparación para despacho portuario</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIO DE AGENCIA / ALQUILER DE EMPRESA -->
+    <section class="agency-section section-spacing" id="agencia">
+        <div class="container">
+            <div class="agency-card">
+                <div class="agency-badge">Línea de Soluciones para Productores Ecuatorianos</div>
+                <h2>¿Produce en Ecuador y necesita exportar bajo un paraguas legal consolidado?</h2>
+                <p class="agency-intro">
+                    En <strong>JONIGE S.A.S.</strong> brindamos nuestro respaldo corporativo para que productores locales y comercializadores puedan colocar sus cargas en mercados internacionales sin frenos aduaneros.
+                </p>
+
+                <div class="agency-features">
+                    <div class="ag-feat">
+                        <i class="fa-solid fa-stamp"></i>
+                        <h5>RUC Exportador Habilitado</h5>
+                        <p>Facturación, representación comercial y gestión documental ante autoridades de control.</p>
+                    </div>
+                    <div class="ag-feat">
+                        <i class="fa-solid fa-truck-moving"></i>
+                        <h5>Logística de Cabezales y Tráilers</h5>
+                        <p>Coordinación de transporte terrestre pesado desde finca hasta patio portuario.</p>
+                    </div>
+                    <div class="ag-feat">
+                        <i class="fa-solid fa-calculator"></i>
+                        <h5>Tarifa Transparente por Contenedor</h5>
+                        <p>Cobro pactado por unidad embarcada, sin costes ocultos ni trabas operativas.</p>
+                    </div>
+                </div>
+
+                <div class="agency-action">
+                    <a href="#contacto" class="btn-solid-gold"><i class="fa-solid fa-handshake"></i> Consultar Disponibilidad de Cupo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y FOOTER CORPORATIVO -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col-main">
+                    <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="footer-logo">
+                    <p class="footer-brand-desc">
+                        Empresa exportadora ecuatoriana constituida bajo las leyes de la República del Ecuador. Comprometida con la excelencia comercial, la sostenibilidad ambiental y la confianza mutua con nuestros clientes globales.
+                    </p>
+                    <div class="company-badge-box">
+                        <span><strong>RUC:</strong> 0993396391001</span>
+                        <span><strong>Constitución:</strong> 23/01/2025</span>
+                        <span><strong>Cantón:</strong> El Empalme, Guayas</span>
+                    </div>
+                </div>
+
+                <div class="footer-col-contact">
+                    <h4>Directorio Comercial</h4>
+                    <ul class="contact-data-list">
+                        <li>
+                            <i class="fa-solid fa-user-tie"></i>
+                            <div>
+                                <span>Representante Legal</span>
+                                <strong>Deivy Alexander Bravo Sornoza</strong>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span>Correo Corporativo</span>
+                                <a href="mailto:deivibravo93@outlook.com">deivibravo93@outlook.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span>Oficina & Operaciones</span>
+                                <strong>El Empalme, Provincia del Guayas, Ecuador</strong>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="social-wrapper">
+                        <span>Canales Digitales:</span>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col-form">
+                    <div class="form-container-box">
+                        <h4>Mesa de Negocios & Cotizaciones</h4>
+                        <p>Complete el requerimiento para recibir propuesta comercial FOB o CIF:</p>
+                        
+                        <form action="https://formspree.io/f/TU_CODIGO" method="POST" class="rfq-form">
+                            <div class="form-row">
+                                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                                <input type="text" name="empresa" placeholder="Empresa / País" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="Correo electrónico comercial" required>
+                                <input type="tel" name="telefono" placeholder="WhatsApp / Teléfono">
+                            </div>
+                            <select name="linea_interes" required>
+                                <option value="" disabled selected>Seleccione línea de interés...</option>
+                                <option value="Madera Tropical">Compra de Madera Tropical (Teca / Balsa / Laurel)</option>
+                                <option value="Camarón Vannamei">Compra de Camarón Vannamei (HOSO / HLSO / IQF)</option>
+                                <option value="Servicio de Agencia">Servicio de Agencia / Alquiler de Operador</option>
+                            </select>
+                            <textarea name="mensaje" rows="3" placeholder="Detalle volumen estimado (contenedores), especificación y puerto de destino..."></textarea>
+                            <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar Solicitud Comercial</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 JONIGE S.A.S. Todos los derechos reservados. Desarrollado por Computadoras Lei.</p>
+                <p>&copy; 2026 JONIGE S.A.S. Todos los derechos reservados. | Sitio Web Desarrollado por Computadoras Lei</p>
+                <div class="footer-legal-links">
+                    <span>Exportaciones Ecuador</span> • <span>Términos B2B</span> • <span>Certificaciones</span>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Botón Flotante WhatsApp -->
-    <a href="#" class="whatsapp-float" target="_blank">
+    <!-- BOTÓN WHATSAPP FLOTANTE CON EFECTO PULSO -->
+    <a href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20exportaciones%20de%20JONIGE%20S.A.S." class="wa-floating-btn" target="_blank" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
+        <span class="wa-tooltip">Cotizar por WhatsApp</span>
     </a>
 
     <script src="js/script.js"></script>
