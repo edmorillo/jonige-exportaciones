@@ -1154,3 +1154,38 @@ img {
     margin-bottom: 25px;
 }
 
+@media (max-width: 768px) {
+    /* 1. RECUPERAR EL MENÚ Y ACOMODARLO */
+    .nav-content {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+    .nav-menu {
+        display: flex !important; /* Forzamos a que vuelva a aparecer */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .top-bar, .btn-primary-nav { 
+        display: none; /* Ocultamos solo la barra superior negra para ahorrar espacio */
+    }
+
+    /* 2. ARREGLAR LA PÁGINA TIRADA "HACIA UN COSTADO" */
+    .catalog-grid {
+        grid-template-columns: 1fr !important; /* Obliga a las cajas a no empujar la pantalla */
+    }
+    .spec-card {
+        padding: 25px 20px; /* Achica los bordes de la caja para que entre en la pantalla */
+    }
+    
+    /* 3. COLAPSAR EL RESTO A 1 COLUMNA PARA EL CELULAR */
+    .values-grid, .form-row, .process-steps, .agency-features, .gallery-grid-dental {
+        grid-template-columns: 1fr;
+    }
+    .hero { padding: 40px 0; min-height: auto; }
+    .hero-title, .hero h1 { font-size: 2.2rem !important; }
+    .hero-stats, .hero-cta-group, .tab-buttons { flex-direction: column; }
+    .agency-card, .form-container-box { padding: 25px 20px; }
+}
