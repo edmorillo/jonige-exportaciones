@@ -65,9 +65,9 @@ img {
 }
 
 .container {
-    max-width: 1400px; /* Ensanchado para que respire más a los lados */
+    width: 90%; /* Usa un porcentaje en lugar de píxeles fijos */
+    max-width: 1400px; /* Permite que crezca más en pantallas grandes */
     margin: 0 auto;
-    padding: 0 5%; /* Padding dinámico que se adapta a la pantalla */
 }
 
 .section-spacing {
@@ -1183,15 +1183,16 @@ img {
 }
 
 /* --- RESPONSIVE MOBILE --- */
+/* --- RESPONSIVE Y MOBILE --- */
 @media (max-width: 1024px) {
     .about-wrapper, .footer-grid {
         grid-template-columns: 1fr;
     }
     .process-steps, .agency-features {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     .gallery-item.large {
         grid-column: span 1;
@@ -1199,18 +1200,33 @@ img {
 }
 
 @media (max-width: 768px) {
+    /* Ocultar elementos de escritorio */
     .nav-menu, .btn-primary-nav, .top-bar {
         display: none;
     }
-    .hero h1 {
-        font-size: 2.6rem;
+    
+    /* Ajustes del Hero para celular */
+    .hero {
+        padding: 40px 0;
+        min-height: auto;
     }
-    .hero-stats, .values-grid, .form-row, .process-steps, .agency-features, .gallery-grid {
-        grid-template-columns: 1fr;
+    .hero h1 {
+        font-size: 2.2rem; /* Título más pequeño */
+    }
+    .hero-stats {
+        flex-direction: column; /* Apilar estadísticas */
+        gap: 15px;
     }
     .hero-cta-group {
-        flex-direction: column;
+        flex-direction: column; /* Apilar botones */
     }
+    
+    /* Colapsar todas las grillas a 1 sola columna */
+    .values-grid, .form-row, .process-steps, .agency-features, .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustes de Tabs para celular */
     .tab-buttons {
         flex-direction: column;
         border-radius: var(--radius-md);
@@ -1219,8 +1235,16 @@ img {
         border-radius: var(--radius-sm);
         justify-content: center;
     }
+    
+    /* Ajustes de secciones */
     .agency-card {
         padding: 40px 20px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .form-container-box {
+        padding: 25px;
     }
 }
 
