@@ -1154,3 +1154,58 @@ img {
     margin-bottom: 25px;
 }
 
+/* =========================================
+   SOLUCIÓN DEFINITIVA CELULAR (DISEÑO Y DESBORDAMIENTO)
+   ========================================= */
+
+/* Ocultar las 3 rayitas cuando se ve en la computadora */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* 1. EL HEADER EXACTO COMO TU DIBUJO (Logo - Botón - Rayitas) */
+    .nav-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px; /* Separación mínima */
+    }
+    .logo-img {
+        height: 35px; /* Achicamos el logo para hacer lugar */
+    }
+    .btn-primary-nav {
+        display: inline-block !important; /* Revivimos el botón en celular */
+        font-size: 0.7rem !important;
+        padding: 8px 12px !important;
+        margin-left: auto; /* Empuja el botón al lado de las rayitas */
+    }
+    .menu-toggle {
+        display: block !important; /* Mostramos las 3 rayitas */
+        background: none;
+        border: none;
+        color: var(--gold);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0 5px;
+    }
+    .nav-menu {
+        display: none; /* Escondemos los links largos para que no molesten */
+    }
+
+    /* 2. SOLUCIÓN AL DESBORDAMIENTO (PÁGINA ROTA DE COSTADO) */
+    body, html {
+        overflow-x: hidden !important; /* Corta de raíz cualquier cosa que empuje a los costados */
+    }
+    .hero-title, .hero h1 {
+        font-size: 2.2rem !important; /* Desinfla el título culpable de empujar la pantalla */
+        line-height: 1.15 !important;
+    }
+    .tab-buttons {
+        display: flex;
+        flex-direction: column; /* Apila botones del catálogo de madera/camarón */
+    }
+    .agency-card, .spec-card, .form-container-box {
+        padding: 30px 20px !important; /* Evita que las cajas rígidas rompan los bordes */
+    }
+}
