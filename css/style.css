@@ -1,4 +1,3 @@
-/* --- VARIABLES Y SISTEMA DE COLOR (Colores JONIGE + Formas Suaves "Demo Dental") --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -12,16 +11,14 @@
     --border-subtle: rgba(194, 167, 92, 0.2);
     --border-card: rgba(255, 255, 255, 0.08);
     
-    /* Nueva Tipografía */
+    /* LETRA POPPINS GENERALIZADA Y SEGURA */
     --font-main: 'Poppins', sans-serif;
     
-    /* Nuevos Bordes Redondeados (Estilo Demo 3) */
     --radius-sm: 12px;
     --radius-md: 24px;
     --radius-lg: 32px;
     --radius-pill: 50px;
     
-    /* Nuevas Sombras Flotantes */
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.15);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
     --shadow-gold: 0 10px 25px rgba(194, 167, 92, 0.25);
@@ -29,7 +26,7 @@
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- RESETEO --- */
+/* --- RESETEO LIMPIO --- */
 * {
     margin: 0;
     padding: 0;
@@ -49,8 +46,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5 {
+/* Aplicamos Poppins explícitamente a los textos para no pisar íconos */
+h1, h2, h3, h4, h5, button, input, textarea, select, span, p, a, li, strong {
     font-family: var(--font-main);
+}
+
+h1, h2, h3, h4, h5 {
     color: var(--text-white);
     font-weight: 600;
     letter-spacing: -0.01em;
@@ -68,13 +69,13 @@ img {
 }
 
 .container {
-    max-width: 1400px; /* Ensanchado para que respire más a los lados */
+    max-width: 1300px; /* Ensanchado para que no quede apretado */
     margin: 0 auto;
-    padding: 0 5%; /* Padding dinámico que se adapta a la pantalla */
+    padding: 0 40px; 
 }
 
 .section-spacing {
-    padding: 100px 0;
+    padding: 90px 0;
 }
 
 .bg-surface {
@@ -83,42 +84,6 @@ img {
 
 .text-gold {
     color: var(--gold);
-}
-
-/* --- BARRA SUPERIOR --- */
-.top-bar {
-    background-color: #040911;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.8rem;
-    padding: 8px 0;
-}
-
-.top-bar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.top-info span, .top-contact a {
-    margin-right: 20px;
-    color: var(--text-muted);
-}
-
-.top-info i, .top-contact i {
-    color: var(--gold);
-    margin-right: 6px;
-}
-
-.top-contact a:hover {
-    color: var(--text-white);
-}
-
-.lang-pill {
-    background: rgba(194, 167, 92, 0.15);
-    color: var(--gold);
-    padding: 3px 10px;
-    border-radius: var(--radius-pill);
-    font-weight: 600;
 }
 
 /* --- NAVBAR FIJO --- */
@@ -145,9 +110,12 @@ img {
     align-items: center;
 }
 
+/* TRUCO PARA EL LOGO */
 .logo-img {
     height: 52px;
     object-fit: contain;
+    filter: invert(1) brightness(1.5) contrast(1.2);
+    mix-blend-mode: screen;
 }
 
 .nav-menu {
@@ -172,7 +140,6 @@ img {
     height: 2px;
     background-color: var(--gold);
     transition: var(--transition);
-    border-radius: 2px;
 }
 
 .nav-menu a:hover::after {
@@ -195,17 +162,16 @@ img {
     box-shadow: 0 15px 30px rgba(194, 167, 92, 0.4);
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION CON VIDEO --- */
 .hero {
     position: relative;
     min-height: 80vh;
     display: flex;
     align-items: center;
     padding: 60px 0;
-    overflow: hidden; /* Asegura que el video no se desborde */
+    overflow: hidden;
 }
 
-/* El video va al fondo absoluto */
 .hero-video {
     position: absolute;
     top: 0;
@@ -214,9 +180,9 @@ img {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    pointer-events: none; /* Evita que el video atrape clicks */
 }
 
-/* El degradado oscuro va encima del video */
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -224,40 +190,10 @@ img {
     z-index: 1;
 }
 
-/* El contenido va encima de todo */
 .hero-container {
     position: relative;
     z-index: 2;
     max-width: 950px;
-}
-
-/* Letra igual de fuerte y limpia que Demo Dental */
-.hero-title {
-    font-size: 4rem;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-.hero-desc {
-    font-size: 1.2rem;
-    color: #C0CFE3;
-    margin-bottom: 40px;
-    max-width: 800px;
-    font-weight: 300;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(7, 16, 30, 0.98) 10%, rgba(7, 16, 30, 0.85) 60%, rgba(14, 26, 46, 0.7) 100%);
-}
-
-.hero-container {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
 }
 
 .hero-badge {
@@ -272,7 +208,6 @@ img {
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 24px;
-    box-shadow: var(--shadow-soft);
 }
 
 .pulse-dot {
@@ -283,11 +218,12 @@ img {
     box-shadow: 0 0 0 4px rgba(46, 213, 115, 0.2);
 }
 
-.hero h1 {
+.hero-title {
     font-size: 3.8rem;
     line-height: 1.15;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .hero-desc {
@@ -308,7 +244,6 @@ img {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-card);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     padding: 16px 24px;
     border-radius: var(--radius-md);
     border-left: 3px solid var(--gold);
@@ -318,19 +253,17 @@ img {
 
 .stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
     background: rgba(255, 255, 255, 0.05);
 }
 
 .stat-card h4 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--gold);
 }
 
 .stat-card p {
     font-size: 0.8rem;
     color: var(--text-white);
-    margin-top: 4px;
     font-weight: 300;
 }
 
@@ -354,7 +287,6 @@ img {
 .btn-solid-gold:hover {
     background-color: var(--gold-hover);
     transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(194, 167, 92, 0.4);
 }
 
 .btn-glass {
@@ -373,55 +305,46 @@ img {
 .btn-glass:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* --- CERTIFICACIONES STRIP --- */
-.cert-bar {
+/* --- CARRUSEL MARQUESINA --- */
+.cert-marquee {
+    overflow: hidden;
     background: #050C16;
+    padding: 18px 0;
     border-top: 1px solid var(--border-card);
     border-bottom: 1px solid var(--border-card);
-    padding: 20px 0;
-}
-
-.cert-container {
+    white-space: nowrap;
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
-.cert-label {
-    color: var(--gold);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.cert-badges {
+.marquee-track {
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 30px;
+    padding-right: 30px;
+    animation: scroll-marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .cert-pill {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-card);
-    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 22px;
     border-radius: var(--radius-pill);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-white);
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: var(--transition);
-}
-
-.cert-pill:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-2px);
+    gap: 10px;
 }
 
 .cert-pill i {
@@ -494,12 +417,11 @@ img {
     gap: 15px;
     align-items: flex-start;
     transition: var(--transition);
-    box-shadow: var(--shadow-soft);
 }
 
 .val-box:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-soft);
     border-color: var(--border-subtle);
 }
 
@@ -516,7 +438,6 @@ img {
 
 .val-box p {
     font-size: 0.85rem;
-    color: var(--text-muted);
 }
 
 .about-highlight-card {
@@ -526,12 +447,11 @@ img {
     border-radius: var(--radius-lg);
     position: relative;
     box-shadow: var(--shadow-soft);
-    transition: var(--transition); /* Permite la animación */
+    transition: var(--transition);
 }
 
-/* Este es el efecto Hover que faltaba */
 .about-highlight-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Efecto de salto al pasar el mouse */
     box-shadow: var(--shadow-hover);
     border-color: rgba(194, 167, 92, 0.5);
 }
@@ -551,7 +471,6 @@ img {
     font-size: 0.95rem;
     color: #BDCEDB;
     margin-bottom: 30px;
-    line-height: 1.7;
 }
 
 .about-highlight-card hr {
@@ -572,7 +491,6 @@ img {
 .hl-footer strong {
     font-size: 1.1rem;
     color: var(--text-white);
-    font-weight: 500;
 }
 
 /* --- TABS ESPECIFICACIONES --- */
@@ -583,14 +501,12 @@ img {
     border-radius: var(--radius-pill);
     border: 1px solid var(--border-card);
     margin-top: 30px;
-    box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .tab-btn {
     background: transparent;
     border: none;
     color: var(--text-muted);
-    font-family: var(--font-main);
     font-weight: 500;
     font-size: 0.95rem;
     padding: 12px 30px;
@@ -600,10 +516,6 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.tab-btn i {
-    font-size: 1.1rem;
 }
 
 .tab-btn.active {
@@ -642,7 +554,6 @@ img {
     display: flex;
     flex-direction: column;
     transition: var(--transition);
-    box-shadow: var(--shadow-soft);
 }
 
 .spec-card:hover {
@@ -652,8 +563,8 @@ img {
 }
 
 .spec-badge {
-    background: rgba(194, 167, 92, 0.1);
-    color: var(--gold);
+    background: rgba(194, 167, 92, 0.2); /* Fondo aclarado */
+    color: #E2C97A;
     padding: 6px 14px;
     border-radius: var(--radius-pill);
     font-size: 0.75rem;
@@ -718,7 +629,6 @@ img {
     display: block;
     font-size: 1.3rem;
     color: var(--gold);
-    font-weight: 600;
     margin-bottom: 4px;
 }
 
@@ -731,7 +641,6 @@ img {
     font-size: 0.85rem;
     color: #BACBDE;
     line-height: 1.6;
-    font-weight: 300;
 }
 
 /* --- PROCESO --- */
@@ -749,7 +658,6 @@ img {
     border-radius: var(--radius-lg);
     position: relative;
     transition: var(--transition);
-    box-shadow: var(--shadow-soft);
     overflow: hidden;
 }
 
@@ -759,25 +667,7 @@ img {
     box-shadow: var(--shadow-hover);
 }
 
-.step-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-}
-
-.step-card:hover::before {
-    transform: scaleX(1);
-}
-
 .step-num {
-    font-family: var(--font-main);
     font-size: 3.5rem;
     font-weight: 700;
     color: rgba(194, 167, 92, 0.08);
@@ -791,85 +681,87 @@ img {
     font-size: 2rem;
     color: var(--gold);
     margin-bottom: 24px;
-    position: relative;
-    z-index: 2;
 }
 
 .step-card h4 {
     font-size: 1.2rem;
     margin-bottom: 12px;
-    position: relative;
-    z-index: 2;
 }
 
 .step-card p {
     font-size: 0.88rem;
-    color: var(--text-muted);
     font-weight: 300;
-    position: relative;
-    z-index: 2;
 }
 
-/* --- GALERÍA EN TERRENO (Efecto Tarjetas Flotantes) --- */
-.gallery-grid {
+/* --- GALERÍA ESTILO DENTAL --- */
+.gallery-grid-dental {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px;
 }
 
-.gallery-item {
-    position: relative;
+.gallery-card-dental {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
     border-radius: var(--radius-md);
     overflow: hidden;
-    height: 280px;
-    border: 1px solid var(--border-card);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
     box-shadow: var(--shadow-soft);
-    cursor: pointer;
 }
 
-.gallery-item.large {
-    grid-column: span 2;
+.gallery-card-dental:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--border-subtle);
 }
 
-.gallery-item img {
+.g-img-box {
+    height: 200px; /* Reducido para que las fotos no ocupen todo */
+    width: 100%;
+    overflow: hidden;
+}
+
+.g-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.6s ease;
 }
 
-.gallery-item:hover img {
+.gallery-card-dental:hover .g-img-box img {
     transform: scale(1.08);
 }
 
-.gallery-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 20px 20px;
-    background: linear-gradient(to top, rgba(7, 16, 30, 0.95) 10%, rgba(7, 16, 30, 0.5) 60%, transparent 100%);
-    transform: translateY(10px);
-    transition: var(--transition);
+.g-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.gallery-item:hover .gallery-caption {
-    transform: translateY(0);
+.g-body h4 {
+    font-size: 1.25rem;
+    color: var(--text-white);
+    margin-bottom: 12px;
 }
 
-.gallery-caption span {
-    font-size: 0.75rem;
-    text-transform: uppercase;
+.g-body p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.g-link {
+    font-size: 0.85rem;
     color: var(--gold);
     font-weight: 600;
-    letter-spacing: 0.05em;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.gallery-caption h5 {
-    font-size: 1.1rem;
-    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* --- AGENCIA CARD --- */
@@ -881,7 +773,6 @@ img {
     text-align: center;
     max-width: 1050px;
     margin: 0 auto;
-    box-shadow: var(--shadow-hover);
 }
 
 .agency-badge {
@@ -900,9 +791,6 @@ img {
 .agency-card h2 {
     font-size: 2.4rem;
     margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .agency-intro {
@@ -926,13 +814,6 @@ img {
     padding: 30px;
     border-radius: var(--radius-md);
     border: 1px solid rgba(255, 255, 255, 0.04);
-    transition: var(--transition);
-}
-
-.ag-feat:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(194, 167, 92, 0.2);
 }
 
 .ag-feat i {
@@ -948,7 +829,6 @@ img {
 
 .ag-feat p {
     font-size: 0.88rem;
-    color: var(--text-muted);
     font-weight: 300;
 }
 
@@ -1015,7 +895,6 @@ img {
 .contact-data-list span {
     display: block;
     font-size: 0.75rem;
-    color: #798CA6;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 2px;
@@ -1030,7 +909,6 @@ img {
     font-size: 0.85rem;
     display: block;
     margin-bottom: 12px;
-    color: var(--text-muted);
 }
 
 .social-links {
@@ -1055,7 +933,6 @@ img {
     background: var(--gold);
     color: #07101E;
     transform: translateY(-4px);
-    box-shadow: var(--shadow-gold);
 }
 
 .form-container-box {
@@ -1095,7 +972,6 @@ img {
     padding: 14px 18px;
     border-radius: var(--radius-sm);
     color: var(--text-white);
-    font-family: var(--font-main);
     font-size: 0.9rem;
     outline: none;
     transition: var(--transition);
@@ -1103,7 +979,6 @@ img {
 
 .rfq-form input:focus, .rfq-form select:focus, .rfq-form textarea:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(194, 167, 92, 0.1);
 }
 
 .btn-submit {
@@ -1115,18 +990,17 @@ img {
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     margin-top: 8px;
+    transition: var(--transition);
 }
 
 .btn-submit:hover {
     background: var(--gold-hover);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-gold);
 }
 
 .footer-bottom {
@@ -1136,8 +1010,6 @@ img {
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.85rem;
-    flex-wrap: wrap;
-    gap: 15px;
     font-weight: 300;
 }
 
@@ -1164,253 +1036,17 @@ img {
     transform: scale(1.1) translateY(-5px);
 }
 
-.wa-tooltip {
-    position: absolute;
-    right: 75px;
-    background: #07101E;
-    color: #FFFFFF;
-    border: 1px solid var(--border-card);
-    padding: 8px 16px;
-    border-radius: var(--radius-pill);
-    font-size: 0.8rem;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: var(--transition);
-    box-shadow: var(--shadow-soft);
-}
-
-.wa-floating-btn:hover .wa-tooltip {
-    opacity: 1;
-}
-
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 1024px) {
-    .about-wrapper, .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    .process-steps, .agency-features {
-        grid-template-columns: 1fr 1fr;
-    }
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .gallery-item.large {
-        grid-column: span 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-menu, .btn-primary-nav, .top-bar {
-        display: none;
-    }
-    .hero h1 {
-        font-size: 2.6rem;
-    }
-    .hero-stats, .values-grid, .form-row, .process-steps, .agency-features, .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    .hero-cta-group {
-        flex-direction: column;
-    }
-    .tab-buttons {
-        flex-direction: column;
-        border-radius: var(--radius-md);
-    }
-    .tab-btn {
-        border-radius: var(--radius-sm);
-        justify-content: center;
-    }
-    .agency-card {
-        padding: 40px 20px;
-    }
-}
-
-/* =========================================
-   AJUSTES FINALES Y CORRECCIONES
-   ========================================= */
-
-/* 1. TRUCO DE MAGIA PARA EL LOGO CON FONDO BLANCO */
-.logo-img {
-    height: 55px;
-    object-fit: contain;
-    /* Invertimos colores: el negro se hace blanco y el fondo blanco se hace negro.
-       Luego, el mix-blend-mode 'screen' hace que el fondo negro se vuelva transparente */
-    filter: invert(1) brightness(1.5) contrast(1.2);
-    mix-blend-mode: screen;
-}
-
-/* 2. REAJUSTE DEL HERO PARA QUE ENCAPSULE EN 100% ZOOM */
-.hero {
-    min-height: 80vh; /* Bajamos de 85 a 80 */
-    padding: 40px 0; /* Menos espacio arriba y abajo */
-    background: none; /* Quitamos la imagen vieja del auto */
-}
-
-.hero h1 {
-    font-size: 3.2rem; /* Achicamos un poco la letra */
-    margin-bottom: 20px;
-}
-
-.hero-desc {
-    margin-bottom: 25px;
-    font-size: 1.05rem;
-}
-
-.hero-stats {
-    margin-bottom: 25px;
-}
-
-/* 3. VIDEO DE FONDO */
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-/* 4. CARRUSEL INFINITO DE CERTIFICACIONES */
-.cert-marquee {
-    overflow: hidden;
-    background: #050C16;
-    padding: 18px 0;
-    border-top: 1px solid var(--border-card);
-    border-bottom: 1px solid var(--border-card);
-    white-space: nowrap;
-    position: relative;
-    display: flex;
-}
-
-.marquee-track {
-    display: flex;
-    gap: 30px;
-    padding-right: 30px;
-    /* Velocidad de la marquesina */
-    animation: scroll-marquee 30s linear infinite;
-}
-
-/* Pausar animación al pasar el mouse (opcional) */
-.marquee-track:hover {
-    animation-play-state: paused;
-}
-
-@keyframes scroll-marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.cert-pill {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 8px 22px;
-    border-radius: var(--radius-pill);
-    font-size: 0.85rem;
-    color: var(--text-white);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-}
-
-/* 5. MEJORA DEL CONTRASTE DEL BADGE "ESPECIE PRINCIPAL" */
-.spec-badge {
-    background: rgba(194, 167, 92, 0.2); /* Fondo más claro */
-    color: #E2C97A; /* Letra más brillante */
-    border: 1px solid rgba(194, 167, 92, 0.3);
-}
-
-/* 6. MEJORA VISUAL DE LOS TEXTOS DE LA GALERÍA */
-.gallery-caption {
-    /* Degradado más cortito para no tapar tanto la foto */
-    background: linear-gradient(to top, rgba(7, 16, 30, 0.98) 0%, rgba(7, 16, 30, 0.7) 40%, transparent 100%);
-    padding: 40px 20px 20px;
-}
-
-/* Ajustes Responsive para el Hero */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-}
-
-/* --- NUEVA GALERÍA ESTILO DENTAL --- */
-.gallery-grid-dental {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.gallery-card-dental {
-    background: var(--bg-card);
-    border: 1px solid var(--border-card);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: var(--transition);
-    box-shadow: var(--shadow-soft);
-}
-
-.gallery-card-dental:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--border-subtle);
-}
-
-.g-img-box {
-    height: 220px; /* Tamaño adaptado para que las fotos no se vean gigantes */
-    width: 100%;
-    overflow: hidden;
-}
-
-.g-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.gallery-card-dental:hover .g-img-box img {
-    transform: scale(1.08); /* Pequeño zoom al pasar el mouse */
-}
-
-.g-body {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.g-body h4 {
-    font-size: 1.25rem;
-    color: var(--text-white);
-    margin-bottom: 12px;
-}
-
-.g-body p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 25px;
-    flex-grow: 1; /* Empuja el botón hacia abajo */
-}
-
-.g-link {
-    font-size: 0.85rem;
-    color: var(--gold);
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Responsivo para la galería nueva */
-@media (max-width: 1024px) {
+    .about-wrapper, .footer-grid { grid-template-columns: 1fr; }
+    .process-steps, .agency-features { grid-template-columns: 1fr 1fr; }
     .gallery-grid-dental { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
-    .gallery-grid-dental { grid-template-columns: 1fr; }
+    .nav-menu, .btn-primary-nav, .top-bar { display: none; }
     .hero-title { font-size: 2.8rem; }
+    .hero-stats, .values-grid, .form-row, .process-steps, .agency-features, .gallery-grid-dental { grid-template-columns: 1fr; }
+    .hero-cta-group { flex-direction: column; }
+    .tab-buttons { flex-direction: column; }
 }

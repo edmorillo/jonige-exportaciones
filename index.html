@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JONIGE S.A.S. | Exportadora de Madera & Camarones Ecuador</title>
     
-    <!-- Tipografías: Syne (títulos industriales modernos) + Plus Jakarta Sans (lectura limpia) -->
+    <!-- TIPOGRAFÍA POPPINS (Estilo Demo Dental) LIMPIA Y CORRECTA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,12 +17,11 @@
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR DE INFORMACIÓN -->
-    <!-- NAVBAR FIJO (Sin la barra superior) -->
+    <!-- NAVBAR FIJO -->
     <header class="navbar" id="navbar">
         <div class="container nav-content">
             <a href="#inicio" class="logo-box">
-                <!-- El CSS se encargará de hacer este logo transparente y blanco -->
+                <!-- El CSS invierte este logo para que quede blanco sin fondo -->
                 <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="logo-img">
             </a>
 
@@ -38,12 +37,11 @@
         </div>
     </header>
 
-    <!-- HERO SECTION CON VIDEO DE FONDO -->
-    <!-- HERO SECTION CON VIDEO DE FONDO -->
+    <!-- HERO SECTION CON VIDEO PÚBLICO SEGURO -->
     <section class="hero" id="inicio">
-        <!-- El video ahora tiene las clases correctas para mostrarse al fondo -->
+        <!-- Video de Buque Mercante (Coverr no bloquea) -->
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="https://cdn.pixabay.com/video/2020/03/11/33499-397194883_large.mp4" type="video/mp4">
+            <source src="https://cdn.coverr.co/videos/coverr-commercial-cargo-ship-2401/1080p.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         
@@ -52,7 +50,6 @@
                 <span class="pulse-dot"></span> Calidad de Exportación B2B
             </div>
             
-            <!-- Tipografía estilo Demo Dental: Directa, fuerte y limpia -->
             <h1 class="hero-title">Tu carga internacional en <br><span class="text-gold">manos de especialistas.</span></h1>
             <p class="hero-desc">
                 Conectamos la riqueza forestal y acuícola del Ecuador con los puertos más exigentes del mundo. Aseguramos trazabilidad, cubicaje exacto y cadena de frío certificada.
@@ -83,14 +80,13 @@
     <!-- CARRUSEL INFINITO DE CERTIFICACIONES -->
     <section class="cert-marquee">
         <div class="marquee-track">
-            <!-- GRUPO 1 -->
             <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> HACCP Certified</div>
             <div class="cert-pill"><i class="fa-solid fa-shield-halved"></i> FDA Compliant</div>
             <div class="cert-pill"><i class="fa-solid fa-leaf"></i> Trazabilidad FSC</div>
             <div class="cert-pill"><i class="fa-solid fa-bug-slash"></i> Tratamiento Fitosanitario</div>
             <div class="cert-pill"><i class="fa-solid fa-ship"></i> Logística Portuaria</div>
             <div class="cert-pill"><i class="fa-solid fa-earth-americas"></i> Mercados Globales</div>
-            <!-- GRUPO 2 (Duplicado exacto para el efecto infinito) -->
+            
             <div class="cert-pill"><i class="fa-solid fa-check-circle"></i> HACCP Certified</div>
             <div class="cert-pill"><i class="fa-solid fa-shield-halved"></i> FDA Compliant</div>
             <div class="cert-pill"><i class="fa-solid fa-leaf"></i> Trazabilidad FSC</div>
@@ -99,6 +95,7 @@
             <div class="cert-pill"><i class="fa-solid fa-earth-americas"></i> Mercados Globales</div>
         </div>
     </section>
+
     <!-- QUIÉNES SOMOS & DIFERENCIAL -->
     <section class="about section-spacing" id="nosotros">
         <div class="container">
@@ -155,7 +152,6 @@
                 <h2 class="section-title">Líneas de Exportación Especializadas</h2>
                 <p class="section-sub">Seleccione una división para consultar detalles de corte, tallas, calibres y métodos de conservación.</p>
                 
-                <!-- SELECTOR DE LÍNEA (BOTONES DE TABS) -->
                 <div class="tab-buttons">
                     <button class="tab-btn active" onclick="openTab(event, 'tab-madera')">
                         <i class="fa-solid fa-tree"></i> División Madera Tropical
@@ -177,24 +173,23 @@
                         <p class="spec-desc">Madera reconocida internacionalmente por su alta densidad, durabilidad y concentración natural de aceites protectores.</p>
                         <ul class="spec-list">
                             <li><strong>Presentación:</strong> Bloques escuadrados / Rolliza / Canteada.</li>
-                            <li><strong>Humedad:</strong> Secado natural (AD) / Estufa (KD) según requerimiento.</li>
-                            <li><strong>Medidas:</strong> Largos estándar de 2.20m a 2.50m | Diámetros y secciones uniformes.</li>
-                            <li><strong>Tratamiento:</strong> Fumigación y certificado fitosanitario de origen.</li>
-                            <li><strong>Aplicaciones:</strong> Industria naval, cubiertas exteriores, ebanistería fina.</li>
+                            <li><strong>Humedad:</strong> Secado natural (AD) / Estufa (KD).</li>
+                            <li><strong>Medidas:</strong> Largos estándar de 2.20m a 2.50m.</li>
+                            <li><strong>Tratamiento:</strong> Fumigación y certificado fitosanitario.</li>
                         </ul>
                     </div>
 
                     <div class="spec-card">
                         <div class="spec-header">
-                            <span class="spec-badge">Línea Liviana & Semidura</span>
+                            <span class="spec-badge">Línea Liviana</span>
                             <h3>Balsa, Laurel & Cedro Tropical</h3>
                         </div>
-                        <p class="spec-desc">Maderas nativas seleccionadas bajo planes de manejo sostenible y licencias ambientales de aprovechamiento forestal.</p>
+                        <p class="spec-desc">Maderas nativas seleccionadas bajo planes de manejo sostenible y licencias ambientales.</p>
                         <ul class="spec-list">
-                            <li><strong>Madera de Balsa:</strong> Ultra ligera, alta absorción estructural para palas eólicas y aeromodelismo.</li>
-                            <li><strong>Laurel:</strong> Grano fino, excelente trabajabilidad para carpintería general y revestimientos.</li>
-                            <li><strong>Cedro:</strong> Resistencia comprobada contra plagas, acabado aromático de gran demanda.</li>
-                            <li><strong>Empaque:</strong> Zunchado de alta tensión, separadores de secado y protección perimetral.</li>
+                            <li><strong>Madera de Balsa:</strong> Ultra ligera, alta absorción.</li>
+                            <li><strong>Laurel:</strong> Grano fino, excelente trabajabilidad.</li>
+                            <li><strong>Cedro:</strong> Resistencia contra plagas y acabado aromático.</li>
+                            <li><strong>Empaque:</strong> Zunchado de alta tensión y protección perimetral.</li>
                         </ul>
                     </div>
 
@@ -206,14 +201,14 @@
                         <div class="spec-stats-box">
                             <div class="spec-stat-item">
                                 <strong>20 & 40 FT</strong>
-                                <span>Contenedores Dry / High Cube</span>
+                                <span>Contenedores Dry / HC</span>
                             </div>
                             <div class="spec-stat-item">
                                 <strong>Precintado</strong>
-                                <span>Aduanero en Patio de Carga</span>
+                                <span>Aduanero en Patio</span>
                             </div>
                         </div>
-                        <p class="spec-note">Inspección directa de estiba por nuestro equipo en El Empalme antes del traslado hacia el puerto marítimo de Guayaquil.</p>
+                        <p class="spec-note">Inspección directa de estiba por nuestro equipo en El Empalme antes del traslado hacia el puerto marítimo.</p>
                     </div>
                 </div>
             </div>
@@ -223,30 +218,29 @@
                 <div class="catalog-grid">
                     <div class="spec-card">
                         <div class="spec-header">
-                            <span class="spec-badge">Litopenaeus Vannamei</span>
+                            <span class="spec-badge">Línea Premium</span>
                             <h3>Presentaciones de Exportación</h3>
                         </div>
-                        <p class="spec-desc">Camarón de cultivo de aguas salobres ecuatorianas, reconocido mundialmente por su firmeza, sabor dulce y textura insuperable.</p>
+                        <p class="spec-desc">Camarón de cultivo de aguas salobres ecuatorianas, reconocido mundialmente por su firmeza y sabor.</p>
                         <ul class="spec-list">
-                            <li><strong>HOSO:</strong> Entero con cabeza y con cáscara (Head-On, Shell-On).</li>
-                            <li><strong>HLSO:</strong> Cola con cáscara sin cabeza (Headless, Shell-On).</li>
-                            <li><strong>PDTO:</strong> Pelado, desvenado con cola (Peeled, Deveined, Tail-On).</li>
-                            <li><strong>P&D:</strong> Pelado y desvenado completo (Peeled & Deveined).</li>
+                            <li><strong>HOSO:</strong> Entero con cabeza y con cáscara.</li>
+                            <li><strong>HLSO:</strong> Cola con cáscara sin cabeza.</li>
+                            <li><strong>PDTO:</strong> Pelado, desvenado con cola.</li>
+                            <li><strong>P&D:</strong> Pelado y desvenado completo.</li>
                         </ul>
                     </div>
 
                     <div class="spec-card">
                         <div class="spec-header">
-                            <span class="spec-badge">Control & Conservación</span>
+                            <span class="spec-badge">Control de Calidad</span>
                             <h3>Tallas & Métodos de Frío</h3>
                         </div>
-                        <p class="spec-desc">Procesamiento en plantas con trazabilidad total, monitoreo continuo de temperatura y empaque de barrera.</p>
+                        <p class="spec-desc">Procesamiento con trazabilidad, monitoreo continuo de temperatura y empaque de barrera.</p>
                         <ul class="spec-list">
-                            <li><strong>Calibres HOSO:</strong> 20/30, 30/40, 40/50, 50/60, 60/70, 70/80 piezas/kg.</li>
-                            <li><strong>Calibres HLSO:</strong> 16/20, 21/25, 26/30, 31/35, 36/40, 41/50 piezas/lb.</li>
-                            <li><strong>Congelación:</strong> IQF (congelado individual ultra rápido) y Bloque tradicional.</li>
-                            <li><strong>Glaseo:</strong> De 0% a 20% adaptado a especificaciones del comprador.</li>
-                            <li><strong>Master Carton:</strong> Cajas de 1kg, 2kg y 10kg selladas para conservación en frío.</li>
+                            <li><strong>Calibres HOSO:</strong> 20/30, 30/40, 40/50, 50/60, 60/70.</li>
+                            <li><strong>Congelación:</strong> IQF y Bloque tradicional.</li>
+                            <li><strong>Glaseo:</strong> De 0% a 20% adaptado al comprador.</li>
+                            <li><strong>Master Carton:</strong> Cajas de 1kg, 2kg y 10kg selladas.</li>
                         </ul>
                     </div>
 
@@ -258,14 +252,14 @@
                         <div class="spec-stats-box">
                             <div class="spec-stat-item">
                                 <strong>-18°C a -22°C</strong>
-                                <span>Monitoreo Térmico Continuo</span>
+                                <span>Monitoreo Continuo</span>
                             </div>
                             <div class="spec-stat-item">
                                 <strong>HACCP / FDA</strong>
-                                <span>Inocuidad Alimentaria Total</span>
+                                <span>Inocuidad Total</span>
                             </div>
                         </div>
-                        <p class="spec-note">Despacho desde plantas procesadoras autorizadas directamente a terminales portuarias con generadores genset activos durante el flete terrestre.</p>
+                        <p class="spec-note">Despacho desde plantas procesadoras directamente a terminales portuarias con generadores genset activos.</p>
                     </div>
                 </div>
             </div>
@@ -293,7 +287,7 @@
                 <div class="step-card">
                     <span class="step-num">02</span>
                     <i class="fa-solid fa-microscope"></i>
-                    <h4>Procesamiento & Normas</h4>
+                    <h4>Procesamiento</h4>
                     <p>Corte, aserrío, tratamiento fitosanitario y empaque bajo protocolos sanitarios y de inocuidad.</p>
                 </div>
 
@@ -314,8 +308,7 @@
         </div>
     </section>
 
-    <!-- GALERÍA DE OPERACIONES EN TERRENO (TUS FOTOS REALES) -->
-    <!-- GALERÍA DE OPERACIONES (Estilo Tarjetas Demo Dental) -->
+    <!-- GALERÍA DE OPERACIONES (Estilo Tarjetas Demo Dental Corregida) -->
     <section class="gallery section-spacing bg-surface" id="galeria">
         <div class="container">
             <div class="section-header-center">
@@ -326,62 +319,56 @@
 
             <div class="gallery-grid-dental">
                 
-                <!-- Tarjeta 1 -->
                 <div class="gallery-card-dental">
                     <div class="g-img-box"><img src="assets/img/contenedor.jpeg" alt="Fumigación"></div>
                     <div class="g-body">
                         <h4>Tratamiento Fitosanitario</h4>
-                        <p>Control estricto y fumigación en cada embarque para cumplir con todas las regulaciones de aduanas internacionales.</p>
+                        <p>Control estricto y fumigación en cada embarque para cumplir con las regulaciones de aduanas internacionales.</p>
                         <span class="g-link">Área de Sanidad <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 2 -->
                 <div class="gallery-card-dental">
                     <div class="g-img-box"><img src="assets/img/Madera.jpeg" alt="Acopio"></div>
                     <div class="g-body">
                         <h4>Acopio Forestal</h4>
-                        <p>Patios de acopio propios donde agrupamos los bloques escuadrados de teca asegurando el secado natural óptimo.</p>
+                        <p>Patios de acopio propios donde agrupamos los bloques de teca asegurando el secado natural óptimo.</p>
                         <span class="g-link">Área de Acopio <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 3 -->
                 <div class="gallery-card-dental">
                     <div class="g-img-box"><img src="assets/img/contenedor2.jpeg" alt="Flete"></div>
                     <div class="g-body">
                         <h4>Flete Terrestre Seguro</h4>
-                        <p>Flota de camiones cabezales preparados para mover la carga pesada desde nuestras fincas hasta el puerto de Guayaquil.</p>
+                        <p>Flota de camiones cabezales preparados para mover la carga pesada desde fincas hasta el puerto.</p>
                         <span class="g-link">Área de Transporte <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 4 -->
                 <div class="gallery-card-dental">
                     <div class="g-img-box"><img src="assets/img/Madera2.jpeg" alt="Selección"></div>
                     <div class="g-body">
                         <h4>Clasificación Especializada</h4>
-                        <p>Lotes de madera rigurosamente clasificados por medida y tipo de corte antes de iniciar el proceso de estiba.</p>
+                        <p>Lotes de madera rigurosamente clasificados por medida y tipo de corte antes de iniciar la estiba.</p>
                         <span class="g-link">Área de Selección <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 5 -->
                 <div class="gallery-card-dental">
                     <div class="g-img-box"><img src="assets/img/contenedor3.jpeg" alt="Logística"></div>
                     <div class="g-body">
                         <h4>Despliegue Logístico</h4>
-                        <p>Coordinación ininterrumpida de contenedores para garantizar que el volumen pactado llegue en los tiempos acordados.</p>
+                        <p>Coordinación ininterrumpida de contenedores para garantizar que el volumen pactado llegue a tiempo.</p>
                         <span class="g-link">Área de Logística <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 6 -->
                 <div class="gallery-card-dental">
                     <div class="g-img-box"><img src="assets/img/Madera3.jpeg" alt="Estiba"></div>
                     <div class="g-body">
                         <h4>Estiba Máxima</h4>
-                        <p>Aprovechamiento total del espacio (cubicaje) en contenedores Dry y High Cube para rentabilizar su flete marítimo.</p>
+                        <p>Aprovechamiento total del espacio (cubicaje) en contenedores Dry y High Cube para rentabilizar el flete.</p>
                         <span class="g-link">Área de Carga <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
@@ -394,10 +381,10 @@
     <section class="agency-section section-spacing" id="agencia">
         <div class="container">
             <div class="agency-card">
-                <div class="agency-badge">Línea de Soluciones para Productores Ecuatorianos</div>
+                <div class="agency-badge">Soluciones para Productores Ecuatorianos</div>
                 <h2>¿Produce en Ecuador y necesita exportar bajo un paraguas legal consolidado?</h2>
                 <p class="agency-intro">
-                    En <strong>JONIGE S.A.S.</strong> brindamos nuestro respaldo corporativo para que productores locales y comercializadores puedan colocar sus cargas en mercados internacionales sin frenos aduaneros.
+                    En <strong>JONIGE S.A.S.</strong> brindamos respaldo corporativo para que productores y comercializadores puedan colocar sus cargas en mercados internacionales sin frenos aduaneros.
                 </p>
 
                 <div class="agency-features">
@@ -408,12 +395,12 @@
                     </div>
                     <div class="ag-feat">
                         <i class="fa-solid fa-truck-moving"></i>
-                        <h5>Logística de Cabezales y Tráilers</h5>
+                        <h5>Logística de Cabezales</h5>
                         <p>Coordinación de transporte terrestre pesado desde finca hasta patio portuario.</p>
                     </div>
                     <div class="ag-feat">
                         <i class="fa-solid fa-calculator"></i>
-                        <h5>Tarifa Transparente por Contenedor</h5>
+                        <h5>Tarifa Transparente</h5>
                         <p>Cobro pactado por unidad embarcada, sin costes ocultos ni trabas operativas.</p>
                     </div>
                 </div>
@@ -463,19 +450,10 @@
                             <i class="fa-solid fa-location-dot"></i>
                             <div>
                                 <span>Oficina & Operaciones</span>
-                                <strong>El Empalme, Provincia del Guayas, Ecuador</strong>
+                                <strong>El Empalme, Guayas, Ecuador</strong>
                             </div>
                         </li>
                     </ul>
-
-                    <div class="social-wrapper">
-                        <span>Canales Digitales:</span>
-                        <div class="social-links">
-                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="footer-col-form">
@@ -494,12 +472,12 @@
                             </div>
                             <select name="linea_interes" required>
                                 <option value="" disabled selected>Seleccione línea de interés...</option>
-                                <option value="Madera Tropical">Compra de Madera Tropical (Teca / Balsa / Laurel)</option>
-                                <option value="Camarón Vannamei">Compra de Camarón Vannamei (HOSO / HLSO / IQF)</option>
-                                <option value="Servicio de Agencia">Servicio de Agencia / Alquiler de Operador</option>
+                                <option value="Madera Tropical">Compra de Madera Tropical</option>
+                                <option value="Camarón Vannamei">Compra de Camarón Vannamei</option>
+                                <option value="Servicio de Agencia">Servicio de Agencia / Alquiler</option>
                             </select>
-                            <textarea name="mensaje" rows="3" placeholder="Detalle volumen estimado (contenedores), especificación y puerto de destino..."></textarea>
-                            <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar Solicitud Comercial</button>
+                            <textarea name="mensaje" rows="3" placeholder="Detalle volumen estimado y puerto de destino..."></textarea>
+                            <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar Solicitud</button>
                         </form>
                     </div>
                 </div>
@@ -507,18 +485,14 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 JONIGE S.A.S. Todos los derechos reservados. | Sitio Web Desarrollado por Computadoras Lei</p>
-                <div class="footer-legal-links">
-                    <span>Exportaciones Ecuador</span> • <span>Términos B2B</span> • <span>Certificaciones</span>
-                </div>
+                <p>&copy; 2026 JONIGE S.A.S. Todos los derechos reservados. | Desarrollado por Computadoras Lei</p>
             </div>
         </div>
     </footer>
 
-    <!-- BOTÓN WHATSAPP FLOTANTE CON EFECTO PULSO -->
-    <a href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20exportaciones%20de%20JONIGE%20S.A.S." class="wa-floating-btn" target="_blank" aria-label="WhatsApp">
+    <!-- BOTÓN WHATSAPP -->
+    <a href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20exportaciones" class="wa-floating-btn" target="_blank" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
-        <span class="wa-tooltip">Cotizar por WhatsApp</span>
     </a>
 
     <script src="js/script.js"></script>
