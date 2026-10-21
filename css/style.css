@@ -1365,3 +1365,309 @@ img {
         width: 100%;
     }
 }
+
+/* =========================================
+   HEADER SIEMPRE FIJO Y MENÚ PANTALLA COMPLETA (VIDEO 1)
+   ========================================= */
+body {
+    padding-top: 75px; /* Compensa el header fijo para que no tape nada */
+}
+
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1500;
+    background-color: rgba(7, 16, 30, 0.95);
+}
+
+.nav-menu-desktop {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu-desktop a {
+    color: var(--text-white);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-menu-desktop a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--gold);
+    transition: var(--transition);
+}
+
+.nav-menu-desktop a:hover::after {
+    width: 100%;
+}
+
+/* Panel Menú Pantalla Completa */
+.fullscreen-menu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: #0B1524;
+    z-index: 2500;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 6%;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+}
+
+.fullscreen-menu.active {
+    transform: translateX(0);
+}
+
+.fs-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fs-menu-close {
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.fs-menu-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.fs-menu-links a {
+    color: var(--text-white);
+    font-size: 1.35rem;
+    font-weight: 700;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fs-menu-links a:hover {
+    color: var(--gold);
+}
+
+.fs-menu-footer {
+    margin-top: auto;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.btn-fs-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--gold);
+    color: #07101E;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.fs-contact-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+/* =========================================
+   HERO SLIDER INTERACTIVO (VIDEO 2) + FRANJA DE 3 CAJITAS
+   ========================================= */
+.hero-slider-section {
+    position: relative;
+    min-height: calc(85vh - 75px);
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-slides {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    display: grid;
+}
+
+.hero-slide {
+    grid-area: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 0 100px 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease-in-out;
+    position: relative;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hero-slide .hero-overlay {
+    background: linear-gradient(135deg, rgba(7, 16, 30, 0.90) 10%, rgba(7, 16, 30, 0.72) 55%, rgba(7, 16, 30, 0.55) 100%);
+}
+
+.hero-line-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.tag-line {
+    width: 32px;
+    height: 3px;
+    background-color: var(--gold);
+    display: inline-block;
+}
+
+/* Controles inferiores del carrusel */
+.hero-slider-controls {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-top: -65px;
+}
+
+.slider-bars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-bar {
+    width: 32px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-bar.active {
+    width: 48px;
+    background: var(--gold);
+}
+
+.slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.slider-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(7, 16, 30, 0.45);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: var(--transition);
+}
+
+.slider-btn:hover {
+    background: var(--gold);
+    color: #07101E;
+    border-color: var(--gold);
+}
+
+/* Franja limpia para las 3 cajitas debajo de la portada */
+.hero-stats-strip {
+    background: var(--bg-surface);
+    padding: 28px 0;
+    border-top: 1px solid var(--border-card);
+}
+
+.hero-stats-strip .hero-stats {
+    margin-bottom: 0 !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .nav-menu-desktop {
+        display: none;
+    }
+    body {
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slider-section {
+        min-height: 520px;
+    }
+
+    .hero-slide {
+        padding: 35px 0 95px 0;
+    }
+
+    .hero-slider-controls {
+        padding-bottom: 22px;
+        margin-top: -58px;
+    }
+
+    .slider-bar {
+        width: 22px;
+    }
+
+    .slider-bar.active {
+        width: 34px;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+    }
+
+    .hero-stats-strip {
+        padding: 20px 0;
+    }
+
+    .hero-stats-strip .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

@@ -18,55 +18,159 @@
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR DE INFORMACIÓN -->
-    <!-- NAVBAR FIJO (Sin la barra superior) -->
+    
     <!-- NAVBAR FIJO CON MENÚ HAMBURGUESA -->
+    <!-- NAVBAR FIJO SIEMPRE ARRIBA -->
     <header class="navbar" id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo-box">
                 <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="logo-img">
             </a>
 
-           
-
-            <!-- Menú navegable -->
-            <nav class="nav-menu" id="nav-menu">
+            <!-- Menú de Escritorio -->
+            <nav class="nav-menu-desktop">
                 <a href="#nosotros">Empresa</a>
-                <a href="#catalogo">Productos</a>
+                <a href="#catalogo">Producto</a>
                 <a href="#proceso">Logística & Calidad</a>
                 <a href="#galeria">Operaciones</a>
                 <a href="#agencia">Servicio Agencia</a>
             </nav>
 
-             <!-- Botones de celular (Cotizar + Rayitas) -->
+            <!-- Acciones Derecha (Botón Cotizar + 3 Rayitas) -->
             <div class="mobile-nav-actions">
                 <a href="#contacto" class="btn-primary-nav">Solicitar Cotización</a>
-                <button class="menu-toggle" id="mobile-menu">
+                <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION CON VIDEO DE FONDO -->
-    <section class="hero" id="inicio">
-        <!-- El video ahora tiene las clases correctas para mostrarse al fondo -->
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="https://cdn.pixabay.com/video/2020/03/11/33499-397194883_large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        
-        <div class="container hero-container">
-            <div class="hero-badge">
-                <span class="pulse-dot"></span> Calidad de Exportación B2B
-            </div>
-            
-            <!-- Tipografía estilo Demo Dental: Directa, fuerte y limpia -->
-            <h1 class="hero-title">Tu carga internacional en <br><span class="text-gold">manos de especialistas.</span></h1>
-            <p class="hero-desc">
-                Conectamos la riqueza forestal y acuícola del Ecuador con los puertos más exigentes del mundo. Aseguramos trazabilidad, cubicaje exacto y cadena de frío certificada.
-            </p>
+    <!-- MENÚ MÓVIL A PANTALLA COMPLETA (ESTILO VIDEO 1) -->
+    <div class="fullscreen-menu" id="fullscreen-menu">
+        <div class="fs-menu-header">
+            <a href="#inicio" class="logo-box fs-close-link">
+                <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="logo-img">
+            </a>
+            <button class="fs-menu-close" id="close-menu" aria-label="Cerrar menú">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
 
+        <nav class="fs-menu-links">
+            <a href="#nosotros" class="fs-close-link">Empresa</a>
+            <a href="#catalogo" class="fs-close-link">Producto</a>
+            <a href="#proceso" class="fs-close-link">Logística & Calidad</a>
+            <a href="#galeria" class="fs-close-link">Operaciones</a>
+            <a href="#agencia" class="fs-close-link">Servicio Agencia</a>
+        </nav>
+
+        <div class="fs-menu-footer">
+            <a href="#contacto" class="btn-fs-quote fs-close-link">SOLICITAR COTIZACIÓN</a>
+            <div class="fs-contact-info">
+                <p>deivibravo93@outlook.com</p>
+                <p>El Empalme, Provincia del Guayas • Ecuador</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SLIDER INTERACTIVO (ESTILO VIDEO 2) -->
+    <section class="hero hero-slider-section" id="inicio">
+        <div class="hero-slides">
+            
+            <!-- DIAPOSITIVA 1: PORTADA GENERAL -->
+            <div class="hero-slide active" style="background-image: url('assets/img/contenedor.jpeg');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-line-tag">
+                        <span class="tag-line"></span> CALIDAD DE EXPORTACIÓN B2B
+                    </div>
+                    <h1 class="hero-title">Tu carga internacional en <br><span class="text-gold">manos de especialistas.</span></h1>
+                    <p class="hero-desc">
+                        Conectamos la riqueza forestal y acuícola del Ecuador con los puertos más exigentes del mundo. Aseguramos trazabilidad, cubicaje exacto y cadena de frío certificada.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#catalogo" class="btn-solid-gold">VER PRODUCTO <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#agencia" class="btn-glass">RENTAR LOGÍSTICA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIAPOSITIVA 2: MADERA TROPICAL -->
+            <div class="hero-slide" style="background-image: url('assets/img/Madera.jpeg');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-line-tag">
+                        <span class="tag-line"></span> DIVISIÓN MADERA TROPICAL
+                    </div>
+                    <h2 class="hero-title">Teca, Balsa y Cedro <br><span class="text-gold">de origen certificado.</span></h2>
+                    <p class="hero-desc">
+                        Seleccionamos, procesamos y estibamos maderas tropicales bajo planes de manejo sostenible, con fumigación y certificado fitosanitario de origen.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#catalogo" class="btn-solid-gold">VER PRODUCTO <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contacto" class="btn-glass">PEDIR COTIZACIÓN</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIAPOSITIVA 3: CAMARÓN VANNAMEI -->
+            <div class="hero-slide" style="background-image: url('assets/img/camaron.jpeg'), url('https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?q=80&w=1400&auto=format&fit=crop');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-line-tag">
+                        <span class="tag-line"></span> DIVISIÓN CAMARÓN VANNAMEI
+                    </div>
+                    <h2 class="hero-title">Cadena de frío e <br><span class="text-gold">inocuidad garantizada.</span></h2>
+                    <p class="hero-desc">
+                        Exportación de camarón ecuatoriano en presentaciones HOSO, HLSO y valor agregado (IQF / Bloque) con monitoreo térmico continuo hacia puertos globales.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#catalogo" class="btn-solid-gold">VER PRODUCTO <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contacto" class="btn-glass">PEDIR COTIZACIÓN</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIAPOSITIVA 4: LOGÍSTICA Y AGENCIA -->
+            <div class="hero-slide" style="background-image: url('assets/img/contenedor2.jpeg');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-line-tag">
+                        <span class="tag-line"></span> OPERACIONES DESDE EL EMPALME
+                    </div>
+                    <h2 class="hero-title">Respaldo legal y <br><span class="text-gold">logística portuaria.</span></h2>
+                    <p class="hero-desc">
+                        Acopio propio, estiba certificada en contenedores Dry y Reefers, precintado aduanero y flete terrestre seguro hasta el Puerto de Guayaquil.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#galeria" class="btn-solid-gold">VER OPERACIONES <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#agencia" class="btn-glass">SERVICIO AGENCIA</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTROLES INFERIORES DEL SLIDER (BARRITAS + BOTONES REDONDOS) -->
+        <div class="container hero-slider-controls">
+            <div class="slider-bars">
+                <button class="slider-bar active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="slider-bar" data-slide="1" aria-label="Slide 2"></button>
+                <button class="slider-bar" data-slide="2" aria-label="Slide 3"></button>
+                <button class="slider-bar" data-slide="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="slider-arrows">
+                <button class="slider-btn" id="prev-slide" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-btn" id="pause-slide" aria-label="Pausar"><i class="fa-solid fa-pause" id="pause-icon"></i></button>
+                <button class="slider-btn" id="next-slide" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRANJA LIMPIA DE INDICADORES DEBAJO DE LA PORTADA -->
+    <section class="hero-stats-strip">
+        <div class="container">
             <div class="hero-stats">
                 <div class="stat-card">
                     <h4>100%</h4>
@@ -81,13 +185,10 @@
                     <p>Inocuidad Garantizada</p>
                 </div>
             </div>
-
-            <div class="hero-cta-group">
-                <a href="#catalogo" class="btn-solid-gold"><i class="fa-solid fa-boxes-stacked"></i> Ver Productos</a>
-                <a href="#agencia" class="btn-glass"><i class="fa-solid fa-truck-ramp-box"></i> Rentar Logística</a>
-            </div>
         </div>
     </section>
+
+    
 
     <!-- CARRUSEL INFINITO DE CERTIFICACIONES -->
     <section class="cert-marquee">
