@@ -20,26 +20,29 @@
 
     <!-- BARRA SUPERIOR DE INFORMACIÓN -->
     <!-- NAVBAR FIJO (Sin la barra superior) -->
+    <!-- NAVBAR FIJO CON MENÚ HAMBURGUESA -->
     <header class="navbar" id="navbar">
         <div class="container nav-content">
             <a href="#inicio" class="logo-box">
-                <!-- El CSS se encargará de hacer este logo transparente y blanco -->
                 <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="logo-img">
             </a>
 
-            <nav class="nav-menu">
+            <!-- Botones de celular (Cotizar + Rayitas) -->
+            <div class="mobile-nav-actions">
+                <a href="#contacto" class="btn-primary-nav">Solicitar Cotización</a>
+                <button class="menu-toggle" id="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Menú navegable -->
+            <nav class="nav-menu" id="nav-menu">
                 <a href="#nosotros">Empresa</a>
                 <a href="#catalogo">Catálogo Técnico</a>
                 <a href="#proceso">Logística & Calidad</a>
                 <a href="#galeria">Operaciones</a>
                 <a href="#agencia">Servicio Agencia</a>
             </nav>
-
-            <a href="#contacto" class="btn-primary-nav">Solicitar Cotización</a>
-            <!-- Botón Hamburguesa para Móvil -->
-            <button class="menu-toggle" id="mobile-menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
     </header>
 

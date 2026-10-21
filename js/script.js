@@ -22,3 +22,20 @@ window.addEventListener('scroll', () => {
         navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
     }
 });
+
+// CONTROLADOR DEL MENÚ MÓVIL
+const mobileMenuBtn = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
+
+if(mobileMenuBtn && navMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+    
+    // Cerrar el menú al tocar un enlace
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+}
