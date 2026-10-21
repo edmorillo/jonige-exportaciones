@@ -89,7 +89,7 @@ img {
 
 /* --- NAVBAR FIJO --- */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     background-color: rgba(7, 16, 30, 0.85);
