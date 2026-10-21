@@ -70,9 +70,8 @@ img {
 
 /* --- CONTENEDOR PRINCIPAL RESPONSIVO --- */
 .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 8%;
+    width: 90%; 
+    max-width: 1400px; 
     margin: 0 auto;
 }
 
@@ -194,6 +193,7 @@ img {
 .hero-container {
     position: relative;
     z-index: 2;
+    max-width: 950px;
 }
 
 .hero-badge {
