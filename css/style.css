@@ -36,6 +36,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Frena el scroll justo debajo del menú fijo */
 }
 
 body {
@@ -836,15 +837,15 @@ img {
 .footer {
     background: #040911;
     border-top: 1px solid var(--border-card);
-    padding: 70px 0 30px 0;
+    padding: 40px 0 20px 0;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1.15fr;
     gap: 50px;
-    margin-bottom: 50px;
-    align-items: stretch; /* Iguala la altura de ambas columnas en la línea roja */
+    margin-bottom: 25px;
+    align-items: stretch;
 }
 
 .footer-col-main {
