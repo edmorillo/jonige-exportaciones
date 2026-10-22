@@ -629,25 +629,24 @@
         </div>
     </section>
 
-    <!-- CONTACTO Y FOOTER CORPORATIVO -->
+    <!-- CONTACTO Y FOOTER CORPORATIVO REDISEÑADO -->
+    <!-- CONTACTO Y FOOTER CORPORATIVO (2 COLUMNAS CON CLASES ORIGINALES) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 
+                <!-- COLUMNA 1: EMPRESA + DIRECTORIO COMERCIAL UNIFICADOS -->
                 <div class="footer-col-main">
                     <img src="assets/img/Logo.png" alt="JONIGE S.A.S." class="footer-logo">
                     <p class="footer-brand-desc">
                         Empresa exportadora ecuatoriana constituida bajo las leyes de la República del Ecuador. Comprometida con la excelencia comercial, la sostenibilidad ambiental y la confianza mutua con nuestros clientes globales.
                     </p>
-                    <div class="company-badge-box">
+                    <div class="company-badge-box" style="margin-bottom: 28px;">
                         <span><strong>RUC:</strong> 0993396391001</span>
                         <span><strong>Constitución:</strong> 23/01/2025</span>
                         <span><strong>Cantón:</strong> El Empalme, Guayas</span>
                     </div>
-                </div>
 
-                <div class="footer-col-contact">
-                    <h4>Directorio Comercial</h4>
                     <ul class="contact-data-list">
                         <li>
                             <i class="fa-solid fa-user-tie"></i>
@@ -660,7 +659,14 @@
                             <i class="fa-solid fa-envelope"></i>
                             <div>
                                 <span>Correo Corporativo</span>
-                                <a href="mailto:deivibravo93@outlook.com">deivibravo93@outlook.com</a>
+                                <a href="mailto:info@jonigesas.com">info@jonigesas.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <span>WhatsApp Comercial</span>
+                                <a href="https://wa.me/593939298060" target="_blank">+593 93 929 8060</a>
                             </div>
                         </li>
                         <li>
@@ -682,27 +688,33 @@
                     </div>
                 </div>
 
+                <!-- COLUMNA 2: FORMULARIO DE COTIZACIONES -->
                 <div class="footer-col-form">
                     <div class="form-container-box" id="contacto">
                         <h4>Mesa de Negocios & Cotizaciones</h4>
                         <p>Complete el requerimiento para recibir propuesta comercial FOB o CIF:</p>
                         
-                        <form action="https://formspree.io/f/TU_CODIGO" method="POST" class="rfq-form">
+                        <!-- CAMBIA "TU_CORREO@gmail.com" POR TU GMAIL PERSONAL PARA PROBAR -->
+                        <form action="https://formsubmit.co/TU_CORREO@gmail.com" method="POST" class="rfq-form">
+                            <input type="hidden" name="_subject" value="Nueva Cotización B2B - JONIGE S.A.S.">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+
                             <div class="form-row">
-                                <input type="text" name="nombre" placeholder="Nombre completo" required>
-                                <input type="text" name="empresa" placeholder="Empresa / País" required>
+                                <input type="text" name="Nombre" placeholder="Nombre completo" required>
+                                <input type="text" name="Empresa_Pais" placeholder="Empresa / País" required>
                             </div>
                             <div class="form-row">
-                                <input type="email" name="email" placeholder="Correo electrónico comercial" required>
-                                <input type="tel" name="telefono" placeholder="WhatsApp / Teléfono">
+                                <input type="email" name="Email" placeholder="Correo electrónico comercial" required>
+                                <input type="tel" name="Telefono" placeholder="WhatsApp / Teléfono">
                             </div>
-                            <select name="linea_interes" required>
+                            <select name="Linea_de_Interes" required>
                                 <option value="" disabled selected>Seleccione línea de interés...</option>
                                 <option value="Madera Tropical">Compra de Madera Tropical (Teca / Balsa / Laurel)</option>
                                 <option value="Camarón Vannamei">Compra de Camarón Vannamei (HOSO / HLSO / IQF)</option>
                                 <option value="Servicio de Agencia">Servicio de Agencia / Alquiler de Operador</option>
                             </select>
-                            <textarea name="mensaje" rows="3" placeholder="Detalle volumen estimado (contenedores), especificación y puerto de destino..."></textarea>
+                            <textarea name="Mensaje" rows="3" placeholder="Detalle volumen estimado (contenedores), especificación y puerto de destino..."></textarea>
                             <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar Solicitud Comercial</button>
                         </form>
                     </div>
@@ -719,8 +731,19 @@
         </div>
     </footer>
 
+    <!-- BOTÓN WHATSAPP FLOTANTE OFICIAL ECUADOR (+593 93 929 8060) -->
+    <a href="https://wa.me/593939298060?text=Hola,%20deseo%20informaci%C3%B3n%20sobre%20exportaciones%20de%20JONIGE%20S.A.S." class="wa-floating-btn" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="wa-tooltip">Cotizar por WhatsApp</span>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
     <!-- BOTÓN WHATSAPP FLOTANTE CON EFECTO PULSO -->
-    <a href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20exportaciones%20de%20JONIGE%20S.A.S." class="wa-floating-btn" target="_blank" aria-label="WhatsApp">
+    <!-- BOTÓN WHATSAPP FLOTANTE OFICIAL -->
+    <a href="https://wa.me/593939298060?text=Hola,%20deseo%20información%20sobre%20exportaciones%20de%20JONIGE%20S.A.S." class="wa-floating-btn" target="_blank" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span class="wa-tooltip">Cotizar por WhatsApp</span>
     </a>

@@ -841,9 +841,10 @@ img {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.3fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: 50px;
     margin-bottom: 60px;
+    align-items: start;
 }
 
 .footer-logo {
@@ -1691,3 +1692,4 @@ body {
         white-space: nowrap;
     }
 }
+
