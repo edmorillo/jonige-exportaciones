@@ -1,9 +1,11 @@
-// 1. CONTROLADOR DE PESTAÑAS (TABS) PARA MADERA Y CAMARÓN
+// 1. CONTROLADOR DE PESTAÑAS INDEPENDIENTE POR SECCIÓN (PRODUCTO Y OPERACIONES)
 function openTab(evt, tabId) {
-    const tabPanes = document.querySelectorAll('.tab-pane');
+    const parentSection = evt.currentTarget.closest('section');
+
+    const tabPanes = parentSection.querySelectorAll('.tab-pane');
     tabPanes.forEach(pane => pane.classList.remove('active'));
 
-    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabBtns = parentSection.querySelectorAll('.tab-btn');
     tabBtns.forEach(btn => btn.classList.remove('active'));
 
     document.getElementById(tabId).classList.add('active');

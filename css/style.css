@@ -1671,3 +1671,23 @@ body {
         gap: 12px;
     }
 }
+
+/* BOTONES DE PESTAÑAS LADO A LADO EN CELULAR */
+@media (max-width: 768px) {
+    .tab-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+        padding: 6px;
+        border-radius: var(--radius-pill) !important;
+    }
+
+    .tab-btn {
+        padding: 10px 8px !important;
+        font-size: 0.8rem !important;
+        border-radius: var(--radius-pill) !important;
+        justify-content: center;
+        white-space: nowrap;
+    }
+}
