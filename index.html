@@ -115,7 +115,7 @@
             </div>
 
             <!-- DIAPOSITIVA 3: CAMARÓN VANNAMEI -->
-            <div class="hero-slide" style="background-image: url('assets/img/camaron.jpeg'), url('https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?q=80&w=1400&auto=format&fit=crop');">
+            <div class="hero-slide" style="background-image: url('assets/img/camaron.jpeg');">
                 <div class="hero-overlay"></div>
                 <div class="container hero-container">
                     <div class="hero-line-tag">
@@ -132,8 +132,8 @@
                 </div>
             </div>
 
-            <!-- DIAPOSITIVA 4: LOGÍSTICA Y AGENCIA -->
-            <div class="hero-slide" style="background-image: url('assets/img/contenedor2.jpeg');">
+            <!-- DIAPOSITIVA 4: EXPORTACIÓN MARÍTIMA Y PUERTO -->
+         <div class="hero-slide" style="background-image: url('assets/img/puerto-guayaquil.jpeg');">
                 <div class="hero-overlay"></div>
                 <div class="container hero-container">
                     <div class="hero-line-tag">
@@ -427,78 +427,159 @@
     </section>
 
     <!-- GALERÍA DE OPERACIONES EN TERRENO (TUS FOTOS REALES) -->
-    <!-- GALERÍA DE OPERACIONES (Estilo Tarjetas Demo Dental) -->
+    <!-- GALERÍA DE OPERACIONES (6 MADERA + 6 CAMARÓN) -->
     <section class="gallery section-spacing bg-surface" id="galeria">
         <div class="container">
             <div class="section-header-center">
                 <span class="section-tag">Transparencia Operativa</span>
                 <h2 class="section-title">Nuestras Operaciones en Terreno</h2>
                 <p class="section-sub">Conozca nuestra infraestructura logística y de control en Ecuador.</p>
+
+                <!-- SELECTOR DE GALERÍA -->
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'galeria-madera')">
+                        <i class="fa-solid fa-tree"></i> División Madera
+                    </button>
+                    <button class="tab-btn" onclick="openTab(event, 'galeria-camaron')">
+                        <i class="fa-solid fa-shrimp"></i> División Camarón
+                    </button>
+                </div>
             </div>
 
-            <div class="gallery-grid-dental">
-                
-                <!-- Tarjeta 1 -->
-                <div class="gallery-card-dental">
-                    <div class="g-img-box"><img src="assets/img/contenedor.jpeg" alt="Fumigación"></div>
-                    <div class="g-body">
-                        <h4>Tratamiento Fitosanitario</h4>
-                        <p>Control estricto y fumigación en cada embarque para cumplir con todas las regulaciones de aduanas internacionales.</p>
-                        <span class="g-link">Área de Sanidad</span>
+            <!-- PESTAÑA 1: TUS 6 FOTOS ORIGINALES DE MADERA -->
+            <div id="galeria-madera" class="tab-pane active">
+                <div class="gallery-grid-dental">
+                    
+                    <!-- Tarjeta 1 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/contenedor.jpeg" alt="Fumigación"></div>
+                        <div class="g-body">
+                            <h4>Tratamiento Fitosanitario</h4>
+                            <p>Control estricto y fumigación en cada embarque para cumplir con todas las regulaciones de aduanas internacionales.</p>
+                            <span class="g-link">Área de Sanidad</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Tarjeta 2 -->
-                <div class="gallery-card-dental">
-                    <div class="g-img-box"><img src="assets/img/Madera.jpeg" alt="Acopio"></div>
-                    <div class="g-body">
-                        <h4>Acopio Forestal</h4>
-                        <p>Patios de acopio propios donde agrupamos los bloques escuadrados de teca asegurando el secado natural óptimo.</p>
-                        <span class="g-link">Área de Acopio</span>
+                    <!-- Tarjeta 2 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/Madera.jpeg" alt="Acopio"></div>
+                        <div class="g-body">
+                            <h4>Acopio Forestal</h4>
+                            <p>Patios de acopio propios donde agrupamos los bloques escuadrados de teca asegurando el secado natural óptimo.</p>
+                            <span class="g-link">Área de Acopio</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Tarjeta 3 -->
-                <div class="gallery-card-dental">
-                    <div class="g-img-box"><img src="assets/img/contenedor2.jpeg" alt="Flete"></div>
-                    <div class="g-body">
-                        <h4>Flete Terrestre Seguro</h4>
-                        <p>Flota de camiones cabezales preparados para mover la carga pesada desde nuestras fincas hasta el puerto de Guayaquil.</p>
-                        <span class="g-link">Área de Transporte</span>
+                    <!-- Tarjeta 3 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/contenedor2.jpeg" alt="Flete"></div>
+                        <div class="g-body">
+                            <h4>Flete Terrestre Seguro</h4>
+                            <p>Flota de camiones cabezales preparados para mover la carga pesada desde nuestras fincas hasta el puerto de Guayaquil.</p>
+                            <span class="g-link">Área de Transporte</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Tarjeta 4 -->
-                <div class="gallery-card-dental">
-                    <div class="g-img-box"><img src="assets/img/Madera2.jpeg" alt="Selección"></div>
-                    <div class="g-body">
-                        <h4>Clasificación Especializada</h4>
-                        <p>Lotes de madera rigurosamente clasificados por medida y tipo de corte antes de iniciar el proceso de estiba.</p>
-                        <span class="g-link">Área de Selección</span>
+                    <!-- Tarjeta 4 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/Madera2.jpeg" alt="Selección"></div>
+                        <div class="g-body">
+                            <h4>Clasificación Especializada</h4>
+                            <p>Lotes de madera rigurosamente clasificados por medida y tipo de corte antes de iniciar el proceso de estiba.</p>
+                            <span class="g-link">Área de Selección</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Tarjeta 5 -->
-                <div class="gallery-card-dental">
-                    <div class="g-img-box"><img src="assets/img/contenedor3.jpeg" alt="Logística"></div>
-                    <div class="g-body">
-                        <h4>Despliegue Logístico</h4>
-                        <p>Coordinación ininterrumpida de contenedores para garantizar que el volumen pactado llegue en los tiempos acordados.</p>
-                        <span class="g-link">Área de Logística</span>
+                    <!-- Tarjeta 5 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/contenedor3.jpeg" alt="Logística"></div>
+                        <div class="g-body">
+                            <h4>Despliegue Logístico</h4>
+                            <p>Coordinación ininterrumpida de contenedores para garantizar que el volumen pactado llegue en los tiempos acordados.</p>
+                            <span class="g-link">Área de Logística</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Tarjeta 6 -->
-                <div class="gallery-card-dental">
-                    <div class="g-img-box"><img src="assets/img/Madera3.jpeg" alt="Estiba"></div>
-                    <div class="g-body">
-                        <h4>Estiba Máxima</h4>
-                        <p>Aprovechamiento total del espacio (cubicaje) en contenedores Dry y High Cube para rentabilizar su flete marítimo.</p>
-                        <span class="g-link">Área de Carga</span>
+                    <!-- Tarjeta 6 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/Madera3.jpeg" alt="Estiba"></div>
+                        <div class="g-body">
+                            <h4>Estiba Máxima</h4>
+                            <p>Aprovechamiento total del espacio (cubicaje) en contenedores Dry y High Cube para rentabilizar su flete marítimo.</p>
+                            <span class="g-link">Área de Carga</span>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
+
+            <!-- PESTAÑA 2: 6 FOTOS DEL PROCESO DE CAMARÓN -->
+            <div id="galeria-camaron" class="tab-pane">
+                <div class="gallery-grid-dental">
+
+                    <!-- Tarjeta 1 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/camaron1.jpeg" alt="Cosecha y Recepción en Frío"></div>
+                        <div class="g-body">
+                            <h4>Cosecha & Recepción en Hielo</h4>
+                            <p>Camarón Vannamei recibido inmediatamente en escamas de hielo para preservar intacta su firmeza, frescura y textura natural.</p>
+                            <span class="g-link">Control en Origen</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/camaron2.jpeg" alt="Lavado y Selección"></div>
+                        <div class="g-body">
+                            <h4>Selección de Materia Prima</h4>
+                            <p>Inspección visual y descarte riguroso en recepción para asegurar lotes uniformes de calidad premium antes del empaque.</p>
+                            <span class="g-link">Área de Recepción</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/camaron3.jpeg" alt="Control Sanitario HACCP"></div>
+                        <div class="g-body">
+                            <h4>Auditoría & Control HACCP</h4>
+                            <p>Monitoreo microbiológico, trazabilidad por lote y verificación de inocuidad bajo normativas internacionales FDA y HACCP.</p>
+                            <span class="g-link">Área de Calidad</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/camaron4.jpeg" alt="Clasificación por Calibre"></div>
+                        <div class="g-body">
+                            <h4>Clasificación por Calibres</h4>
+                            <p>Separación exacta por talla y peso en presentaciones entero (HOSO), cola (HLSO) y pelado desvenado (PDTO / P&D).</p>
+                            <span class="g-link">Línea de Calibrado</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/camaron5.jpeg" alt="Congelación IQF y Master Carton"></div>
+                        <div class="g-body">
+                            <h4>Congelación IQF & Empaque</h4>
+                            <p>Túneles de ultracongelación rápida (IQF) y bloqueo tradicional, con glaseo controlado y sellado en Master Carton.</p>
+                            <span class="g-link">Planta Frigorífica </span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="gallery-card-dental">
+                        <div class="g-img-box"><img src="assets/img/camaron6.jpeg" alt="Despacho en Contenedores Reefers"></div>
+                        <div class="g-body">
+                            <h4>Despacho en Contenedores Reefers</h4>
+                            <p>Carga refrigerada con monitoreo térmico continuo (-18°C a -22°C) y genset activo directo al Puerto de Guayaquil.</p>
+                            <span class="g-link">Logística Portuaria</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 
