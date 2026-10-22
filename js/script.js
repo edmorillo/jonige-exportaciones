@@ -127,3 +127,56 @@ if (slides.length > 0) {
         });
     });
 }
+
+// 5. MOTOR DE ENVÍO DEL FORMULARIO SIN SALIR DE LA PÁGINA
+const rfqForm = document.getElementById('rfq-form');
+
+if (rfqForm) {
+    rfqForm.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Evita que la página se recargue o salga a otra web
+
+        const submitBtn = rfqForm.querySelector('.btn-submit');
+        const originalBtnText = submitBtn.innerHTML;
+
+        // Estado de carga en el mismo botón
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando solicitud...';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(rfqForm);
+
+        try {
+            const response = await fetch(rfqForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Confirmación visual limpia sin romper el diseño
+                submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Solicitud Enviada con Éxito!';
+                submitBtn.style.backgroundColor = '#25D366';
+                submitBtn.style.color = '#07101E';
+                rfqForm.reset(); // Limpia los campos del formulario
+
+                // Vuelve el botón a su estado dorado original después de 5 segundos
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.style.color = '';
+                    submitBtn.disabled = false;
+                }, 5000);
+            } else {
+                throw new Error('Error en el envío');
+            }
+        } catch (error) {
+            submitBtn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Error al enviar. Intente nuevamente';
+            submitBtn.disabled = false;
+
+            setTimeout(() => {
+                submitBtn.innerHTML = originalBtnText;
+            }, 4000);
+        }
+    });
+}
