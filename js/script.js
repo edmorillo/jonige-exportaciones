@@ -128,18 +128,18 @@ if (slides.length > 0) {
     });
 }
 
-// 5. MOTOR DE ENVÍO DEL FORMULARIO SIN SALIR DE LA PÁGINA
+// 5. MOTOR DE ENVÍO DEL FORMULARIO OPTIMIZADO
 const rfqForm = document.getElementById('rfq-form');
 
 if (rfqForm) {
     rfqForm.addEventListener('submit', async function(e) {
-        e.preventDefault(); // Evita que la página se recargue o salga a otra web
+        e.preventDefault();
 
         const submitBtn = rfqForm.querySelector('.btn-submit');
         const originalBtnText = submitBtn.innerHTML;
 
-        // Estado de carga en el mismo botón
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando solicitud...';
+        // Feedback inmediato al usuario
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando solicitud comercial...';
         submitBtn.disabled = true;
 
         const formData = new FormData(rfqForm);
@@ -154,13 +154,13 @@ if (rfqForm) {
             });
 
             if (response.ok) {
-                // Confirmación visual limpia sin romper el diseño
+                // Éxito instantáneo una vez que responde el servidor
                 submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Solicitud Enviada con Éxito!';
                 submitBtn.style.backgroundColor = '#25D366';
                 submitBtn.style.color = '#07101E';
-                rfqForm.reset(); // Limpia los campos del formulario
+                rfqForm.reset();
 
-                // Vuelve el botón a su estado dorado original después de 5 segundos
+                // Restaura el botón original a los 5 segundos
                 setTimeout(() => {
                     submitBtn.innerHTML = originalBtnText;
                     submitBtn.style.backgroundColor = '';
