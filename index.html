@@ -68,7 +68,7 @@
         <div class="fs-menu-footer">
             <a href="#contacto" class="btn-fs-quote fs-close-link">SOLICITAR COTIZACIÓN</a>
             <div class="fs-contact-info">
-                <p>deivibravo93@outlook.com</p>
+                <p>info@jonige.com</p>
                 <p>El Empalme, Provincia del Guayas • Ecuador</p>
             </div>
         </div>
@@ -664,7 +664,7 @@
                                 <i class="fa-solid fa-envelope"></i>
                                 <div>
                                     <span>Correo Corporativo</span>
-                                    <a href="mailto:info@jonigesas.com">info@jonigesas.com</a>
+                                    <a href="mailto:info@jonige.com">info@jonige.com</a>
                                 </div>
                             </li>
                             <li>
@@ -701,28 +701,26 @@
                         <p>Complete el requerimiento para recibir propuesta comercial FOB o CIF:</p>
                         
                         <!-- CAMBIA "TU_CORREO@gmail.com" POR TU GMAIL PERSONAL PARA PROBAR -->
-                        <form id="rfq-form" action="https://formsubmit.co/ajax/edisonmorillo489@gmail.com" method="POST" class="rfq-form">
-                            <input type="hidden" name="_subject" value="Nueva Cotización B2B - JONIGE S.A.S.">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_template" value="table">
+                        <form id="rfq-form" class="rfq-form">
+    <input type="hidden" name="asunto_dinamico" id="asunto_dinamico" value="Nueva Cotización B2B - JONIGE S.A.S.">
 
-                            <div class="form-row">
-                                <input type="text" name="Nombre" placeholder="Nombre completo" required>
-                                <input type="text" name="Empresa_Pais" placeholder="Empresa / País" required>
-                            </div>
-                            <div class="form-row">
-                                <input type="email" name="Email" placeholder="Correo electrónico comercial" required>
-                                <input type="tel" name="Telefono" placeholder="WhatsApp / Teléfono">
-                            </div>
-                            <select name="Linea_de_Interes" required>
-                                <option value="" disabled selected>Seleccione línea de interés...</option>
-                                <option value="Madera Tropical">Compra de Madera Tropical (Teca / Balsa / Laurel)</option>
-                                <option value="Camarón Vannamei">Compra de Camarón Vannamei (HOSO / HLSO / IQF)</option>
-                                <option value="Servicio de Agencia">Servicio de Agencia / Alquiler de Operador</option>
-                            </select>
-                            <textarea name="Mensaje" rows="3" placeholder="Detalle volumen estimado (contenedores), especificación y puerto de destino..."></textarea>
-                            <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar Solicitud Comercial</button>
-                        </form>
+    <div class="form-row">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="text" name="empresa_pais" placeholder="Empresa / País" required>
+    </div>
+    <div class="form-row">
+        <input type="email" name="email" placeholder="Correo electrónico comercial" required>
+        <input type="tel" name="telefono" placeholder="WhatsApp / Teléfono">
+    </div>
+    <select name="linea_interes" id="linea_interes" required>
+        <option value="" disabled selected>Seleccione línea de interés...</option>
+        <option value="Madera Tropical">Compra de Madera Tropical (Teca / Balsa / Laurel)</option>
+        <option value="Camarón Vannamei">Compra de Camarón Vannamei (HOSO / HLSO / IQF)</option>
+        <option value="Exportación Frescos / Al Kilo / Agencia">Exportación de Frescos / Al Kilo / Servicio de Agencia</option>
+    </select>
+    <textarea name="mensaje" rows="3" placeholder="Detalle volumen estimado (contenedores o kilos), especificación y puerto de destino..."></textarea>
+    <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar Solicitud Comercial</button>
+</form>
                     </div>
                 </div>
 

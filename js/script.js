@@ -128,39 +128,52 @@ if (slides.length > 0) {
     });
 }
 
-// 5. MOTOR DE ENVÍO DEL FORMULARIO SIN SALIR DE LA PÁGINA
+// 5. MOTOR DE ENVÍO CON ASUNTO DINÁMICO Y MAQUETA HTML (VÍA EMAILJS)
 const rfqForm = document.getElementById('rfq-form');
 
 if (rfqForm) {
     rfqForm.addEventListener('submit', async function(e) {
-        e.preventDefault(); // Evita que la página se recargue o salga a otra web
+        e.preventDefault();
 
         const submitBtn = rfqForm.querySelector('.btn-submit');
         const originalBtnText = submitBtn.innerHTML;
 
-        // Estado de carga en el mismo botón
+        // 1. Armar el Asunto Dinámico según lo que eligió en el listado
+        const lineaElegida = document.getElementById('linea_interes').value;
+        const nombreCliente = rfqForm.querySelector('[name="nombre"]').value;
+        const empresaPais = rfqForm.querySelector('[name="empresa_pais"]').value;
+        const inputAsunto = document.getElementById('asunto_dinamico');
+
+        if (lineaElegida === 'Madera Tropical') {
+            inputAsunto.value = `🪵 [Cotización Madera] Solicitud de ${nombreCliente} (${empresaPais})`;
+        } else if (lineaElegida === 'Camarón Vannamei') {
+            inputAsunto.value = `🦐 [Cotización Camarón] Solicitud de ${nombreCliente} (${empresaPais})`;
+        } else {
+            inputAsunto.value = `📦 [Exportación Frescos / Al Kilo] Solicitud de ${nombreCliente} (${empresaPais})`;
+        }
+
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando solicitud...';
         submitBtn.disabled = true;
 
-        const formData = new FormData(rfqForm);
-
         try {
-            const response = await fetch(rfqForm.action, {
+            // Envío a través de EmailJS con tu maqueta HTML personalizada
+            const response = await fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: (() => {
+                    const formData = new FormData(rfqForm);
+                    formData.append('service_id', 'service_vp43z6m');
+                    formData.append('template_id', 'template_de7zznr');
+                    formData.append('user_id', '-_MVByZp5Z3SMmXT3');
+                    return formData;
+                })()
             });
 
             if (response.ok) {
-                // Confirmación visual limpia sin romper el diseño
                 submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Solicitud Enviada con Éxito!';
                 submitBtn.style.backgroundColor = '#25D366';
                 submitBtn.style.color = '#07101E';
-                rfqForm.reset(); // Limpia los campos del formulario
+                rfqForm.reset();
 
-                // Vuelve el botón a su estado dorado original después de 5 segundos
                 setTimeout(() => {
                     submitBtn.innerHTML = originalBtnText;
                     submitBtn.style.backgroundColor = '';
