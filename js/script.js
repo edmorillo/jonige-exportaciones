@@ -149,7 +149,7 @@ if (rfqForm) {
         } else if (lineaElegida === 'Camarón Vannamei') {
             inputAsunto.value = `🦐 [Cotización Camarón] Solicitud de ${nombreCliente} (${empresaPais})`;
         } else {
-            inputAsunto.value = `📦 [Exportación Frescos / Al Kilo] Solicitud de ${nombreCliente} (${empresaPais})`;
+            inputAsunto.value = `📦 [Exportación Frescos - Al Kilo] Solicitud de ${nombreCliente} (${empresaPais})`;
         }
 
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando solicitud...';
