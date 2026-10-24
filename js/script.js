@@ -161,7 +161,7 @@ if (rfqForm) {
                 method: 'POST',
                 body: (() => {
                     const formData = new FormData(rfqForm);
-                    formData.append('service_id', 'service_vp43z6m');
+                    formData.append('service_id', 'service_ic588fk');
                     formData.append('template_id', 'template_4ksf5cu');
                     formData.append('user_id', '-_MVByZp5Z3SMmXT3');
                     return formData;
