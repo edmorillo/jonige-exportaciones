@@ -1839,4 +1839,208 @@ body {
         gap: 6px;
         margin-top: 20px;
     }
+}/* =========================================
+   EFECTO SCROLL REVEAL + HOVER CORREGIDO
+   ========================================= */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(38px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+    will-change: opacity, transform;
+}
+
+.reveal-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s !important; /* Quita la demora para que el mouse reaccione al instante */
+}
+
+/* Devuelve y mejora el movimiento al pasar el mouse (levanta + agranda un poquito) */
+.gallery-card-dental.revealed:hover,
+.spec-card.revealed:hover,
+.step-card.revealed:hover,
+.val-box.revealed:hover,
+.stat-card.revealed:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: var(--shadow-hover);
+    border-color: var(--gold);
+}
+
+/* =========================================
+   MEJORAS ESTILO SOLARPOWER (FOTOS, CHECKS, INSIGNIA Y FONDO AGENCIA)
+   ========================================= */
+
+/* 1. Efecto desvanecido suave en la parte inferior de las fotos */
+.g-img-box {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.g-img-box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 68%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bg-card) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.g-body {
+    position: relative;
+    z-index: 2;
+    margin-top: -22px;
+    padding-top: 10px;
+}
+
+/* 2. Tildes con circulito dorado en las listas de productos */
+.spec-list li {
+    position: relative;
+    padding-left: 28px !important;
+}
+
+.spec-list li::before {
+    content: '\f058'; /* Ícono check-circle de FontAwesome */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 400;
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-size: 1rem;
+}
+
+/* 3. Pastilla "MÁS SOLICITADO" arriba a la derecha en la 1ra tarjeta de cada catálogo */
+.catalog-grid .spec-card:first-child {
+    position: relative;
+    border-color: rgba(194, 167, 92, 0.45);
+}
+
+.catalog-grid .spec-card:first-child::after {
+    content: 'MÁS SOLICITADO';
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background-color: #C2A75C;
+    color: #07101E;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(194, 167, 92, 0.35);
+}
+
+/* 4. Fondo fotográfico con velo oscuro en la tarjeta de Agencia (como en la captura 2) */
+.agency-card {
+    background: linear-gradient(135deg, rgba(7, 16, 30, 0.88) 0%, rgba(14, 26, 46, 0.82) 100%), 
+                url('../assets/img/puerto-guayaquil.jpeg') center/cover no-repeat !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(194, 167, 92, 0.4) !important;
+}
+
+.agency-card h2,
+.agency-card .ag-feat h5 {
+    color: #FFFFFF !important;
+}
+
+.agency-card .agency-intro,
+.agency-card .ag-feat p,
+.agency-card .agency-trust-strip {
+    color: #D0DFEE !important;
+}
+
+.agency-card .agency-badge {
+    background: rgba(194, 167, 92, 0.2) !important;
+    color: #E2C97A !important;
+}
+
+.agency-card .ag-feat {
+    background: rgba(7, 16, 30, 0.55) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 5. Botones y barra de confianza en Sección Agencia */
+.agency-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-wa-glass {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 14px 32px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.btn-wa-glass i {
+    color: #25D366;
+    font-size: 1.25rem;
+}
+
+.btn-wa-glass:hover {
+    background: rgba(37, 211, 102, 0.18);
+    border-color: #25D366;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
+}
+
+.agency-trust-strip {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.trust-sep {
+    opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+    .catalog-grid .spec-card:first-child::after {
+        position: static;
+        display: inline-block;
+        width: fit-content;
+        margin-top: 12px;
+    }
+    .agency-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .agency-cta-group .btn-solid-gold,
+    .agency-cta-group .btn-wa-glass {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.86rem;
+        padding: 12px 20px;
+    }
+    .trust-sep {
+        display: none;
+    }
+    .agency-trust-strip {
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 20px;
+    }
 }
