@@ -1737,3 +1737,106 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* =========================================
+   MEJORAS VISUALES: DESVANECIDO EN FOTOS + BOTÓN WA AGENCIA
+   ========================================= */
+
+/* 1. Efecto desvanecido suave en la parte inferior de las fotos */
+.g-img-box {
+    position: relative;
+    height: 215px;
+}
+
+.g-img-box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 65%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bg-card) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Sube levemente el título para que pise sobre el desvanecido */
+.g-body {
+    position: relative;
+    z-index: 2;
+    margin-top: -18px;
+    padding-top: 10px;
+}
+
+/* 2. Grupo de botones y barra de confianza en Sección Agencia */
+.agency-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-wa-glass {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-white);
+    border: 1px solid rgba(37, 211, 102, 0.45);
+    padding: 14px 32px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.btn-wa-glass i {
+    color: #25D366;
+    font-size: 1.25rem;
+}
+
+.btn-wa-glass:hover {
+    background: rgba(37, 211, 102, 0.14);
+    border-color: #25D366;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+}
+
+.agency-trust-strip {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    opacity: 0.85;
+}
+
+.trust-sep {
+    opacity: 0.35;
+}
+
+@media (max-width: 768px) {
+    .agency-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .agency-cta-group .btn-solid-gold,
+    .agency-cta-group .btn-wa-glass {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.86rem;
+        padding: 12px 20px;
+    }
+    .trust-sep {
+        display: none;
+    }
+    .agency-trust-strip {
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 20px;
+    }
+}
