@@ -193,3 +193,31 @@ if (rfqForm) {
         }
     });
 } 
+
+// 6. EFECTO DE APARICIÓN AL BAJAR (SCROLL REVEAL AUTOMÁTICO)
+document.addEventListener('DOMContentLoaded', () => {
+    const elementsToReveal = document.querySelectorAll(
+        '.stat-card, .section-header-center, .about-text-col, .about-highlight-card, .val-box, .spec-card, .step-card, .gallery-card-dental, .agency-card, .ag-feat, .footer-col-main, .footer-col-form'
+    );
+
+    elementsToReveal.forEach((el, index) => {
+        el.classList.add('reveal-item');
+        // Efecto escalonado suave para elementos en la misma fila
+        const delay = (index % 3) * 0.1;
+        el.style.transitionDelay = `${delay}s`;
+    });
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target); // Se anima una sola vez y queda fijo
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    elementsToReveal.forEach(el => revealObserver.observe(el));
+});
