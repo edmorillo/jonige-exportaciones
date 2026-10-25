@@ -781,27 +781,6 @@ img {
     transition: var(--transition);
 }
 
-/* Pastilla "MÁS SOLICITADO" en la 1ra tarjeta del catálogo */
-.catalog-grid .spec-card:first-child {
-    position: relative;
-    border-color: rgba(194, 167, 92, 0.45);
-}
-
-.catalog-grid .spec-card:first-child::after {
-    content: 'MÁS SOLICITADO';
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    background-color: #C2A75C;
-    color: #07101E;
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    padding: 5px 12px;
-    border-radius: 50px;
-    box-shadow: 0 4px 12px rgba(194, 167, 92, 0.35);
-}
-
 .spec-badge {
     background: rgba(194, 167, 92, 0.2);
     color: #E2C97A;
